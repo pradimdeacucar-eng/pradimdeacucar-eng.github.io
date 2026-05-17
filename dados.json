@@ -1,19 +1,55 @@
 [
     {
         "federal": {
-            "judiciario": {"nome": "Supremo Tribunal Federal", "link": "https://portal.stf.jus.br"},
-            "executivo": {"nome": "Presidência / Diário Oficial da União", "link": "https://www.in.gov.br"},
-            "legislativo": {"nome": "Congresso Nacional", "link": "https://www.gov.br"}
+            "judiciario": {
+                "nome": "Supremo Tribunal Federal (STF)", 
+                "link": "https://portal.stf.jus.br",
+                "monitoramento": "Decisões Monocráticas, Colegiadas e Acórdãos"
+            },
+            "executivo": {
+                "nome": "Portal do Planalto", 
+                "link": "https://www.planalto.gov.br",
+                "monitoramento": "Constituição Federal, Decretos, Leis e Estatutos dos Ministérios"
+            },
+            "legislativo": {
+                "nome": "Câmara e Senado Federal", 
+                "link": "https://www.congressonacional.leg.br",
+                "monitoramento": "Projetos de Lei, Votações e Portarias Parlamentares"
+            }
         },
         "estadual": {
-            "judiciario": {"nome": "Tribunal de Justiça da Bahia (TJBA)", "link": "https://www.tjba.jus.br"},
-            "executivo": {"nome": "Governo do Estado / Diário Oficial BA", "link": "https://www.ba.gov.br/diario-oficial"},
-            "legislativo": {"nome": "Assembleia Legislativa (ALBA)", "link": "https://www.al.ba.gov.br"}
+            "judiciario": {
+                "nome": "Tribunal de Justiça da Bahia (TJBA)", 
+                "link": "https://www.tjba.jus.br",
+                "monitoramento": "Jurisprudência, Precatórios e Despachos Estaduais"
+            },
+            "executivo": {
+                "nome": "Diário Oficial do Estado da Bahia", 
+                "link": "https://www.ba.gov.br/diario-oficial",
+                "monitoramento": "Atos Administrativos Governamentais"
+            },
+            "legislativo": {
+                "nome": "Assembleia Legislativa da Bahia (ALBA)", 
+                "link": "https://www.al.ba.gov.br",
+                "monitoramento": "Decretos Legislativos Estaduais"
+            }
         },
         "municipal": {
-            "judiciario": {"nome": "Comarca Judiciária de Prado", "link": "https://www.tjba.jus.br"},
-            "executivo": {"nome": "Diário Oficial Eletrônico (DOEM)", "link": "https://doem.org.br/ba/prado"},
-            "legislativo": {"nome": "Estrutura Organizacional / Transparência", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
+            "judiciario": {
+                "nome": "Comarca Judiciária de Prado / TJBA", 
+                "link": "https://pje.tjba.jus.br/pje/Processo/ConsultaProcesso/listView.seam",
+                "monitoramento": "Decisões Locais, Editais de Comarca e Processos Públicos"
+            },
+            "executivo": {
+                "nome": "Portal de Transparência Municipal (IBDM)", 
+                "link": "https://ibdm.org.br",
+                "monitoramento": "Última versão disponível e estável contra quedas"
+            },
+            "legislativo": {
+                "nome": "Câmara Municipal / Diário Oficial Municipal", 
+                "link": "https://www.camaraprado.ba.gov.br",
+                "monitoramento": "Atas Legislativas e Resoluções de Prado/BA"
+            }
         },
         "blockchain": {
             "rede": "Polygon PoS Mainnet",
