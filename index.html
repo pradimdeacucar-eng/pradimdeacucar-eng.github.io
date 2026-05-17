@@ -1,4 +1,54 @@
-<script>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gêmeo Digital - Prado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0b0f19; color: #f3f4f6; font-family: sans-serif; }
+    </style>
+</head>
+<body class="p-6">
+    <div class="max-w-4xl mx-auto space-y-6">
+        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl flex justify-between items-center">
+            <div>
+                <h1 class="text-xl font-bold tracking-wider text-slate-200">GÊMEO DIGITAL v1.2.1</h1>
+                <p class="text-xs text-slate-400">Monitoramento de Ativos e Portais Digitais - Prado/BA</p>
+            </div>
+            <div class="flex items-center space-x-3 bg-slate-950 px-4 py-2 rounded-lg border border-slate-800">
+                <div id="status-led" class="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"></div>
+                <span id="status-text" class="text-xs font-mono text-slate-300">STATUS: AGUARDANDO_VARREDURA</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-4">
+                <h2 class="text-sm font-bold uppercase tracking-widest text-blue-400 border-b border-slate-800 pb-2">📂 Poder Executivo</h2>
+                
+                <div class="flex justify-between items-center p-3 bg-slate-950 rounded-lg border border-slate-800/50">
+                    <span class="text-sm text-slate-300">Diário Oficial Municipal:</span>
+                    <div id="gaveta-prefeito" class="text-sm font-mono"></div>
+                </div>
+
+                <div class="flex justify-between items-center p-3 bg-slate-950 rounded-lg border border-slate-800/50">
+                    <span class="text-sm text-slate-300">Site Oficial da Prefeitura:</span>
+                    <div id="gaveta-site-executivo" class="text-sm font-mono"></div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-4">
+                <h2 class="text-sm font-bold uppercase tracking-widest text-yellow-500 border-b border-slate-800 pb-2">📂 Poder Legislativo</h2>
+                
+                <div class="flex justify-between items-center p-3 bg-slate-950 rounded-lg border border-slate-800/50">
+                    <span class="text-sm text-slate-300">Portal da Câmara:</span>
+                    <div id="gaveta-portal-camara" class="text-sm font-mono"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
         async function conectarRobo() {
             try {
                 const resposta = await fetch('dados.json');
@@ -6,6 +56,7 @@
                 const dados = Array.isArray(d) ? d[0] : d;
                 
                 if (dados) {
+                    // 1. Processamento da Coluna Executivo
                     if (dados.executivo) {
                         const gavetaPrefeito = document.getElementById('gaveta-prefeito');
                         if (gavetaPrefeito) {
@@ -26,6 +77,7 @@
                         }
                     }
                     
+                    // 2. Processamento da Coluna Legislativo
                     if (dados.legislativo) {
                         const gavetaCamara = document.getElementById('gaveta-portal-camara');
                         if (gavetaCamara) {
@@ -48,3 +100,5 @@
         }
         window.onload = conectarRobo;
     </script>
+</body>
+</html>
