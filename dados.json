@@ -1,3 +1,10 @@
-[
-  "https://doem.org.br/ba/prado/diarios/previsualizar/0jOveoaM"
-]
+{
+  "executivo": {
+    "diario_oficial": "https://doem.org.br/ba/prado/diarios/previsualizar/0jOveoaM",
+    "site_oficial": ""
+  },
+  "legislativo": {
+    "portal_camara": "",
+    "transmissao_sessoes": ""
+  }
+}
