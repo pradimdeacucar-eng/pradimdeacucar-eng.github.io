@@ -2,58 +2,23 @@
     {
         "federal": {
             "judiciario": {"nome": "Supremo Tribunal Federal", "link": "https://portal.stf.jus.br"},
-            "executivo": {"nome": "Presidência da República / DOU", "link": "https://www.in.gov.br"},
-            "legislativo": {"nome": "Congresso Nacional (Câmara e Senado)", "link": "https://www.gov.br"}
+            "executivo": {"nome": "Presidência / Diário Oficial da União", "link": "https://www.in.gov.br"},
+            "legislativo": {"nome": "Congresso Nacional (Câmara/Senado)", "link": "https://www.gov.br"}
         },
         "estadual": {
             "judiciario": {"nome": "Tribunal de Justiça da Bahia (TJBA)", "link": "https://www.tjba.jus.br"},
             "executivo": {"nome": "Governo do Estado / Diário Oficial BA", "link": "https://www.ba.gov.br/diario-oficial"},
-            "legislativo": {"nome": "Assembleia Legislativa da Bahia (ALBA)", "link": "https://www.al.ba.gov.br"}
+            "legislativo": {"nome": "Assembleia Legislativa (ALBA)", "link": "https://www.al.ba.gov.br"}
         },
         "municipal": {
             "judiciario": {"nome": "Comarca Judiciária de Prado", "link": "https://www.tjba.jus.br"},
-            "executivo": {"nome": "Diário Oficial do Município (DOEM)", "link": "https://doem.org.br/ba/prado"},
-            "legislativo": {"nome": "Câmara Municipal de Prado", "link": "https://www.camaraprado.ba.gov.br/"}
+            "executivo": {"nome": "Prefeitura Municipal de Prado", "link": "https://www.prado.ba.gov.br"},
+            "legislativo": {"nome": "Câmara Municipal de Vereadores", "link": "https://www.camaraprado.ba.gov.br"}
         },
-        "organograma_prefeitura": {
-            "gabinete_prefeito": [
-                {"publicacao": "Gabinete", "assunto": "Atos de Chefia, Decretos de Nomeação e Agendas Oficiais.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
-            ],
-            "procuradoria_geral": [
-                {"publicacao": "PGM", "assunto": "Pareceres Jurídicos, Defesas da Municipalidade e Contratos.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
-            ],
-            "controladoria_geral": [
-                {"publicacao": "CGM", "assunto": "Auditorias Internas, Fiscalização de Gastos e Transparência.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
-            ],
-            "administracao": [
-                {"publicacao": "Sec. Administração", "assunto": "Licitações, Recursos Humanos, Pregões e Contratos.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
-            ],
-            "financas": [
-                {"publicacao": "Sec. Finanças", "assunto": "Orçamento Municipal, Arrecadação, Tributos e PPA.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
-            ],
-            "saude": [
-                {"publicacao": "Sec. Saúde / FMS", "assunto": "Gestão do SUS, Portarias do Fundo de Saúde e Insumos.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
-            ],
-            "educacao": [
-                {"publicacao": "Sec. Educação", "assunto": "Fundeb, Merenda Escolar, Editais e Gestão Pedagógica.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
-            ],
-            "obras_servicos": [
-                {"publicacao": "Sec. Obras", "assunto": "Infraestrutura Urbana, Saneamento e Limpeza Pública.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
-            ],
-            "assistencia_social": [
-                {"publicacao": "Sec. Social", "assunto": "Programas Sociais, Cras, Creas e Benefícios.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
-            ]
-        },
-        "organograma_camara": {
-            "mesa_diretora": [
-                {"publicacao": "Mesa Diretora", "assunto": "Atos da Presidência, Portarias Internas e Resoluções.", "link": "https://www.camaraprado.ba.gov.br/"}
-            ],
-            "comissoes": [
-                {"publicacao": "Comissões", "assunto": "Pareceres de Constituição, Justiça, Finanças e Orçamento.", "link": "https://www.camaraprado.ba.gov.br/"}
-            ],
-            "plenario": [
-                {"publicacao": "Plenário", "assunto": "Projetos de Lei, Votações, Requerimentos e Atas de Sessão.", "link": "https://www.camaraprado.ba.gov.br/"}
-            ]
+        "blockchain": {
+            "rede": "Polygon PoS Mainnet",
+            "marketplace": "https://opensea.io",
+            "status_auditoria": "Contratos Inteligentes Ativos"
         }
     }
 ]

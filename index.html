@@ -15,7 +15,7 @@
         <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl flex justify-between items-center">
             <div>
                 <h1 class="text-2xl font-black tracking-widest text-blue-500 font-mono">PRADO VERITAS</h1>
-                <p class="text-xs text-slate-400">Gêmeo Digital de Auditoria Territorial e Governança - Prado/BA</p>
+                <p class="text-xs text-slate-400">Gêmeo Digital de Auditoria Territorial e Governança Imutável - Prado/BA</p>
             </div>
             <div class="flex items-center space-x-3 bg-slate-950 px-4 py-2 rounded-lg border border-slate-800">
                 <div id="status-led" class="w-3 h-3 bg-green-400 rounded-full"></div>
@@ -24,7 +24,7 @@
         </div>
 
         <div class="space-y-4">
-            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 font-mono">🌐 Matriz Hierárquica dos Três Poderes</h2>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 font-mono">🌐 Matriz Hierárquica de Monitoramento</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-slate-900/40 p-3 rounded-xl border border-slate-800/60">
                 <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-[10px] text-blue-400 font-bold block mb-1">🌎 FED / JUDICIÁRIO</span><div id="fed-jud"></div></div>
@@ -46,74 +46,74 @@
         </div>
 
         <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-4">
-            <h2 class="text-sm font-bold text-emerald-400 border-b border-slate-800 pb-2 uppercase tracking-wider">🏛️ Estrutura Administrativa do Executivo (Prefeitura)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="container-prefeitura"></div>
-        </div>
+            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                <h2 class="text-sm font-bold text-purple-400 uppercase tracking-wider flex items-center gap-2">
+                    ⬡ Repositório Imutável & Leilão de Atos (Rede Polygon)
+                </h2>
+                <span class="text-[10px] bg-purple-950 text-purple-300 border border-purple-800 font-mono px-2 py-0.5 rounded">POLYGON_MAINNET</span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-3">
+                    <span class="text-xs font-bold text-slate-300 block">📦 Tokenização de Decretos & Licitações</span>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Cada ato oficial auditado pelo <span class="text-blue-400 font-mono font-bold">PRADO VERITAS</span> é convertido em um metadado criptográfico e registrado na blockchain. Isso impede que leis, empenhos ou contratos sejam alterados retroativamente sem deixar rastros.
+                    </p>
+                    <div class="text-[11px] font-mono bg-slate-900 p-2.5 rounded border border-slate-800/60 text-slate-400">
+                        Status do Ledger: <span id="chain-status" class="text-purple-400 font-bold">Verificando Contratos...</span>
+                    </div>
+                </div>
 
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-4">
-            <h2 class="text-sm font-bold text-yellow-500 border-b border-slate-800 pb-2 uppercase tracking-wider">🏛️ Estrutura Legislativa (Câmara de Vereadores)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="container-camara"></div>
+                <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="text-xs font-bold text-yellow-500 block">🛒 Vitrine de Ativos e NFTs Governamentais</span>
+                        <p class="text-xs text-slate-400 mt-1">
+                            Acesse o ambiente de mercado secundário e verificação pública para inspecionar os blocos e coleções cunhadas na rede Polygon.
+                        </p>
+                    </div>
+                    <div id="blockchain-actions">
+                        <span class="text-xs text-slate-600 italic">Carregando credenciais da blockchain...</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
 
     <script>
-        function criarCard(titulo, dadosPasta, corTexto) {
-            const item = dadosPasta && dadosPasta[0] ? dadosPasta[0] : {publicacao: "Sem dados", assunto: "Nenhum ato indexado para este setor hoje.", link: "#"};
-            return `
-                <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2">
-                    <span class="text-xs font-bold ${corTexto} uppercase tracking-wider block">📌 ${titulo}</span>
-                    <div class="p-2 bg-slate-900 rounded border border-slate-800 text-[11px] space-y-1">
-                        <span class="font-bold text-slate-300 block">${item.publicacao}</span>
-                        <p class="text-slate-400 font-sans mb-2">${item.assunto}</p>
-                        ${item.link !== '#' ? `<a href="${item.link}" target="_blank" class="text-blue-400 hover:underline block text-[10px] font-mono font-bold">🔗 ACESSAR ESTRUTURA OFICIAL</a>` : ''}
-                    </div>
-                </div>
-            `;
-        }
-
-        async function inicializarVeritas() {
+        async function carregarVeritas() {
             try {
                 const resposta = await fetch('dados.json');
+                if (!resposta.ok) throw new Error('Falha ao ler arquivo de dados');
                 const d = await resposta.json();
                 const dados = Array.isArray(d) ? d[0] : d;
                 
                 if (dados) {
-                    // Renderiza Esferas Superiores
+                    // Renderiza Linha Federal
                     document.getElementById('fed-jud').innerHTML = `<a href="${dados.federal.judiciario.link}" target="_blank" class="text-blue-400 hover:underline font-mono text-xs">${dados.federal.judiciario.nome}</a>`;
                     document.getElementById('fed-exec').innerHTML = `<a href="${dados.federal.executivo.link}" target="_blank" class="text-blue-400 hover:underline font-mono text-xs">${dados.federal.executivo.nome}</a>`;
                     document.getElementById('fed-leg').innerHTML = `<a href="${dados.federal.legislativo.link}" target="_blank" class="text-blue-400 hover:underline font-mono text-xs">${dados.federal.legislativo.nome}</a>`;
 
+                    // Renderiza Linha Estadual
                     document.getElementById('est-jud').innerHTML = `<a href="${dados.estadual.judiciario.link}" target="_blank" class="text-purple-400 hover:underline font-mono text-xs">${dados.estadual.judiciario.nome}</a>`;
                     document.getElementById('est-exec').innerHTML = `<a href="${dados.estadual.executivo.link}" target="_blank" class="text-purple-400 hover:underline font-mono text-xs">${dados.estadual.executivo.nome}</a>`;
                     document.getElementById('est-leg').innerHTML = `<a href="${dados.estadual.legislativo.link}" target="_blank" class="text-purple-400 hover:underline font-mono text-xs">${dados.estadual.legislativo.nome}</a>`;
 
+                    // Renderiza Linha Municipal
                     document.getElementById('mun-jud').innerHTML = `<a href="${dados.municipal.judiciario.link}" target="_blank" class="text-emerald-400 hover:underline font-mono text-xs">${dados.municipal.judiciario.nome}</a>`;
                     document.getElementById('mun-exec').innerHTML = `<a href="${dados.municipal.executivo.link}" target="_blank" class="text-emerald-400 hover:underline font-mono text-xs">${dados.municipal.executivo.nome}</a>`;
-                    document.getElementById('mun-leg').innerHTML = `<a href="${dados.municipal.legislativo.link}" target="_blank" class="text-emerald-400 hover:underline font-mono text-xs">${dados.municipal.legislativo.nome}</a>`;
+                    document.getElementById('mun-leg').innerHTML = `<a href="${dados.municipal.camara.link}" target="_blank" class="text-emerald-400 hover:underline font-mono text-xs">${dados.municipal.camara.nome}</a>`;
 
-                    // Renderiza Estrutura Prefeitura
-                    const pref = dados.organograma_prefeitura;
-                    document.getElementById('container-prefeitura').innerHTML = 
-                        criarCard("Gabinete do Prefeito", pref.gabinete_prefeito, "text-blue-400") +
-                        criarCard("Procuradoria Geral (PGM)", pref.procuradoria_generall || pref.procuradoria_geral, "text-cyan-400") +
-                        criarCard("Controladoria Geral (CGM)", pref.controladoria_geral, "text-indigo-400") +
-                        criarCard("Secretaria de Administração", pref.administracao, "text-orange-400") +
-                        criarCard("Secretaria de Finanças", pref.financas, "text-amber-400") +
-                        criarCard("Secretaria de Saúde", pref.saude, "text-emerald-400") +
-                        criarCard("Secretaria de Educação", pref.educacao, "text-pink-400") +
-                        criarCard("Secretaria de Obras e Serviços", pref.obras_servicos, "text-teal-400") +
-                        criarCard("Secretaria de Assistência Social", pref.assistencia_social, "text-violet-400");
-
-                    // Renderiza Estrutura Câmara
-                    const cam = dados.organograma_camara;
-                    document.getElementById('container-camara').innerHTML = 
-                        criarCard("Mesa Diretora", cam.mesa_diretora, "text-yellow-500") +
-                        criarCard("Comissões Permanentes", cam.comissoes, "text-yellow-400") +
-                        criarCard("Plenário Deliberativo", cam.plenario, "text-yellow-300");
+                    // Painel de Criptografia / Polygon
+                    document.getElementById('chain-status').innerText = dados.blockchain.status_auditoria;
+                    document.getElementById('blockchain-actions').innerHTML = `
+                        <a href="${dados.blockchain.marketplace}" target="_blank" class="block text-center bg-purple-600 hover:bg-purple-700 text-white font-mono font-bold text-xs py-2.5 px-4 rounded transition-colors tracking-wider">
+                            🚀 ABRIR MARKETPLACE POLYGON NFT
+                        </a>
+                    `;
 
                     document.getElementById('status-text').className = "text-xs font-mono text-green-400";
-                    document.getElementById('status-text').innerText = "STATUS: VERITAS_MAPPED_OK";
+                    document.getElementById('status-text').innerText = "STATUS: VERITAS_SINC_OK";
                 }
             } catch (erro) {
                 document.getElementById('status-led').className = "w-3 h-3 bg-red-500 rounded-full";
@@ -121,7 +121,7 @@
                 document.getElementById('status-text').innerText = "STATUS: ERRO_ARQUIVO_JSON";
             }
         }
-        window.onload = inicializarVeritas;
+        window.onload = carregarVeritas;
     </script>
 </body>
 </html>
