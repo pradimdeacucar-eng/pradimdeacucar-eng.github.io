@@ -1,113 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecrã Central - Agente de IA Veritas</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background-color: #05070f; color: #e2e8f0; font-family: monospace; }
-        .aba-analise { background-color: #090d1a; border: 1px solid #1e293b; }
-    </style>
-</head>
-<body class="p-6">
-    <div class="max-w-6xl mx-auto space-y-6">
+// Função que o seu ecrã vai rodar na nuvem ou localmente no navegador
+async function carregarEAuditarDados() {
+    try {
+        // 1. Puxa o texto leve que o robô extraiu dos Diários Oficiais (Sem salvar PDFs no seu HD)
+        const respostaDados = await fetch(`dados.json?nocache=${Date.now()}`);
+        const dadosDoDiario = await respostaDados.json();
+
+        // 2. Puxa a sua Matriz Jurídica com as regras do TCM/BA, STF e Leis Federais
+        const respostaCompliance = await fetch(`gabarito_compliance.json?nocache=${Date.now()}`);
+        const gabaritoCompliance = await respostaCompliance.json();
+
+        console.log("🧠 Agente Veritas: Dados e Matriz Jurídica carregados com sucesso.");
         
-        <div class="border border-slate-850 bg-slate-900/40 p-4 rounded flex justify-between items-center">
-            <div>
-                <h1 class="text-base font-bold text-blue-500">🛡️ AGENTE COGNITIVO VERITAS</h1>
-                <p class="text-[11px] text-slate-400">Varredura, validação jurídica e inteligência corretiva autônoma</p>
-            </div>
-            <span class="text-xs text-purple-400 font-bold bg-purple-950/40 px-3 py-1 border border-purple-800 rounded animate-pulse">AGENTE_ONLINE</span>
-        </div>
+        // Aqui o Agente começa o cruzamento eletrônico
+        processarAuditoriaCognitiva(dadosDoDiario, gabaritoCompliance);
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div class="space-y-4">
-                <div class="bg-slate-900/30 border border-slate-800 p-4 rounded space-y-3">
-                    <label class="text-[10px] font-bold text-slate-400 block">📥 ENTRADA DE ATOSpÚBLICOS / DIÁRIOS:</label>
-                    <textarea id="entrada-ato" class="w-full h-48 bg-slate-950 border border-slate-800 rounded p-3 text-xs text-slate-300 focus:outline-none focus:border-purple-500 font-mono" placeholder="Cole aqui o texto do Diário Oficial ou da Sessão da Câmara para o Agente analisar..."></textarea>
-                    
-                    <button onclick="acionarAgenteAutonomo()" class="w-full bg-purple-700 hover:bg-purple-600 text-white font-bold text-xs px-4 py-3 rounded transition-colors">
-                        🧠 INICIAR VARREDURA E ANÁLISE DO AGENTE
-                    </button>
-                </div>
-            </div>
+    } catch (erro) {
+        console.error("⚠️ Erro ao carregar os arquivos de dados na nuvem:", erro);
+        alert("Erro de leitura: Verifique se o dados.json e o gabarito_compliance.json estão na mesma pasta.");
+    }
+}
 
-            <div class="lg:col-span-2 bg-slate-950 border border-slate-850 rounded-lg p-5 space-y-4">
-                <div class="border-b border-slate-900 pb-2 flex justify-between items-center">
-                    <span class="text-xs font-bold text-slate-400">🖥️ MONITOR DE JULGAMENTO DO AGENTE</span>
-                    <span id="status-diagnostico" class="text-[10px] font-mono text-slate-500">IDLE</span>
-                </div>
+function processarAuditoriaCognitiva(diario, gabarito) {
+    // O Agente pega as chaves da Prefeitura e da Câmara de forma unificada
+    const escopos = ["PREFEITURA", "CAMARA_VEREADORES"];
+    
+    escopos.forEach(orgao => {
+        if (!gabarito[orgao]) return;
 
-                <div id="saida-agente" class="space-y-4 text-xs hidden">
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <div class="p-3 bg-slate-900 rounded border border-slate-800">
-                            <span class="text-slate-500 block text-[10px]">DIAGNÓSTICO TÉCNICO:</span>
-                            <span id="diagnostico-status" class="font-bold text-red-400">--</span>
-                        </div>
-                        <div class="p-3 bg-slate-900 rounded border border-slate-800">
-                            <span class="text-slate-500 block text-[10px]">CLASSIFICAÇÃO DO ERRO:</span>
-                            <span id="conserto-status" class="font-bold text-yellow-500">--</span>
-                        </div>
-                    </div>
-
-                    <div class="aba-analise p-4 rounded space-y-2">
-                        <span class="text-blue-400 font-bold block">⚖️ FUNDAMENTAÇÃO E VALIDAÇÃO NOS REPOSITÓRIOS:</span>
-                        <p id="texto-fundamentacao" class="text-slate-300 font-sans leading-relaxed"></p>
-                    </div>
-
-                    <div class="bg-emerald-950/20 border border-emerald-900/30 p-4 rounded space-y-2">
-                        <span class="text-emerald-400 font-bold block">🚀 ROTA DE VIABILIDADE (POLÍTICA E ADMINISTRATIVA):</span>
-                        <p id="texto-solucao" class="text-slate-200 font-sans leading-relaxed text-[13px] font-medium"></p>
-                    </div>
-
-                </div>
-
-                <div id="prompt-inicial" class="text-center py-16 text-slate-600">
-                    <p>Aguardando envio de dados para o Agente de IA analisar os repositórios da internet...</p>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
-    <script>
-        function acionarAgenteAutonomo() {
-            const textoInput = document.getElementById('entrada-ato').value.trim();
-            if(!textoInput) {
-                alert("Por favor, cole um texto para o Agente processar.");
-                return;
-            }
-
-            // Exibe o painel de carregamento simulando o raciocínio do Agente
-            document.getElementById('prompt-inicial').classList.add('hidden');
-            const saida = document.getElementById('saida-agente');
-            saida.classList.remove('hidden');
-            document.getElementById('status-diagnostico').innerText = "VARRENDO REPOSITÓRIOS DA INTERNET...";
-
-            // Lógica interna do Agente decidindo com base no texto inserido
-            setTimeout(() => {
-                document.getElementById('status-diagnostico').innerText = "ANÁLISE CONCLUÍDA";
+        // Varre as subpastas temáticas (Saúde, Educação, Logística) do seu manual de conformidade
+        for (const [tema, regras] of Object.entries(gabarito[orgao])) {
+            
+            // O Agente busca se alguma palavra-chave da lei aparece nos textos extraídos do dados.json
+            regras.palavras_chave.forEach(chave => {
                 
-                if(textoInput.toLowerCase().includes("licitação") || textoInput.toLowerCase().includes("compra")) {
-                    document.getElementById('diagnostico-status').innerText = "❌ INCONFORMIDADE EM CONTRATAÇÃO PÚBLICA";
-                    document.getElementById('conserto-status').innerText = "🟢 ERRO SANÁVEL (TEM CONSERTO)";
-                    
-                    document.getElementById('texto-fundamentacao').innerText = "O Agente realizou a varredura no repositório de leis federais e identificou que o ato viola o Art. 75 da Lei 14.133/2021 devido à falta de justificativa de preço anexada. Cruzando dados com acórdãos semelhantes do Tribunal de Contas dos Municípios (TCM/BA), constatou-se que a omissão gera risco de rejeição de contas, mas não configura má-fé imediata.";
-                    
-                    document.getElementById('texto-solucao').innerText = "O melhor caminho político e administrativo é emitir uma Portaria Corretiva Retificadora. A administração deve anexar um Relatório Técnico de Coleta de Preços de Mercado (mínimo de 3 orçamentos oficiais) ao processo físico, publicando a errata no Diário Oficial em até 5 dias. Isso blinda o secretário de saúde politicamente e regulariza a conformidade técnica perante o tribunal sem suspender o fornecimento de insumos.";
-                } else {
-                    document.getElementById('diagnostico-status').innerText = "❌ DESCONFORMIDADE DE PROVIMENTO DE PESSOAL";
-                    document.getElementById('conserto-status').innerText = "⚠️ REQUER REFORMA ADMINISTRATIVA IMEDIATA";
-                    
-                    document.getElementById('texto-fundamentacao').innerText = "Análise autônoma cruzada com a Súmula Vinculante nº 43 do STF. A nomeação identificada atribui funções operacionais a um cargo de provimento em comissão. Os repositórios do STF e do e-TCM apontam que este desvio de finalidade viola diretamente o princípio do concurso público (Art. 37, II, CF).";
-                    
-                    document.getElementById('texto-solucao').innerText = "Caminho Viável: Como o erro não possui conserto de manutenção (é nulo de pleno direito), a rota política recomendada é a exoneração imediata do servidor para evitar denúncia por improbidade pelo Ministério Público. Administrativamente, o município deve enviar à Câmara de Vereadores um Projeto de Lei criando a função temporária regulamentada por Processo Seletivo Simplificado (PSS), resolvendo a carência técnica de forma legal.";
+                // Procurando o termo correspondente no lote do Diário Oficial
+                if (diario[tema] && diario[tema].some(linha => linha.toLowerCase().includes(chave))) {
+                    console.log(`🎯 Inconformidade em potencial detectada em ${orgao} -> Tema: ${tema}`);
+                    // Aqui o sistema monta o laudo citando a base_legal e o plano_de_acao do seu gabarito
                 }
-            }, 1500);
+            });
         }
-    </script>
-</body>
-</html>
+    });
+}

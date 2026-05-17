@@ -1,60 +1,27 @@
-[
-    {
-        "federal": {
-            "judiciario": {
-                "nome": "Supremo Tribunal Federal (STF)", 
-                "link": "https://portal.stf.jus.br",
-                "monitoramento": "Decisões Monocráticas, Colegiadas e Acórdãos"
-            },
-            "executivo": {
-                "nome": "Portal do Planalto", 
-                "link": "https://www.planalto.gov.br",
-                "monitoramento": "Constituição Federal, Decretos, Leis e Estatutos dos Ministérios"
-            },
-            "legislativo": {
-                "nome": "Câmara e Senado Federal", 
-                "link": "https://www.congressonacional.leg.br",
-                "monitoramento": "Projetos de Lei, Votações e Portarias Parlamentares"
-            }
+{
+    "PREFEITURA": {
+        "SAUDE_E_EDUCACAO": {
+            "palavras_chave": ["dispensa", "inexigibilidade", "emergencial", "insumos", "medicamentos", "combustível"],
+            "base_legal": "Art. 75 da Lei Federal nº 14.133/2021 (Nova Lei de Licitações)",
+            "jurisprudencia": "Instruções Normativas do TCM/BA & Princípio da Eficiência (Art. 37, CF)",
+            "gargalo_comum": "Fracionamento ilegal de despesa ou ausência de ampla cotação de preços de mercado para contratação direta.",
+            "plano_de_acao": "Recomendar a instauração imediata de Registro de Preços unificado para o trimestre subsequente e a publicação compulsória dos orçamentos coletados no PNCP em até 10 dias."
         },
-        "estadual": {
-            "judiciario": {
-                "nome": "Tribunal de Justiça da Bahia (TJBA)", 
-                "link": "https://www.tjba.jus.br",
-                "monitoramento": "Jurisprudência, Precatórios e Despachos Estaduais"
-            },
-            "executivo": {
-                "nome": "Diário Oficial do Estado da Bahia", 
-                "link": "https://www.ba.gov.br/diario-oficial",
-                "monitoramento": "Atos Administrativos Governamentais"
-            },
-            "legislativo": {
-                "nome": "Assembleia Legislativa da Bahia (ALBA)", 
-                "link": "https://www.al.ba.gov.br",
-                "monitoramento": "Decretos Legislativos Estaduais"
-            }
-        },
-        "municipal": {
-            "judiciario": {
-                "nome": "Comarca Judiciária de Prado / TJBA", 
-                "link": "https://pje.tjba.jus.br/pje/Processo/ConsultaProcesso/listView.seam",
-                "monitoramento": "Decisões Locais, Editais de Comarca e Processos Públicos"
-            },
-            "executivo": {
-                "nome": "Portal de Transparência Municipal (IBDM)", 
-                "link": "https://ibdm.org.br",
-                "monitoramento": "Última versão disponível e estável contra quedas"
-            },
-            "legislativo": {
-                "nome": "Câmara Municipal / Diário Oficial Municipal", 
-                "link": "https://www.camaraprado.ba.gov.br",
-                "monitoramento": "Atas Legislativas e Resoluções de Prado/BA"
-            }
-        },
-        "blockchain": {
-            "rede": "Polygon PoS Mainnet",
-            "status_auditoria": "Contratos Imutáveis Ativos",
-            "p2p_link": "https://pradimdeacucar-eng.github.io/p2p-marketplace"
+        "GABINETE_E_ADMINISTRACAO": {
+            "palavras_chave": ["nomeia", "cargo em comissão", "assessor", "gratificação", "portaria"],
+            "base_legal": "Art. 37, V da Constituição Federal",
+            "jurisprudencia": "Súmula Vinculante nº 43 do STF (Desvio de finalidade de provimento e nepotismo)",
+            "gargalo_comum": "Nomeação de pessoal para cargos comissionados cujas atribuições fáticas são operacionais/técnicas, e não de direção ou assessoramento estratégico.",
+            "plano_de_acao": "Exonerar preventivamente ou readequar o decreto executivo para funções consultivas, abrindo Processo Seletivo Simplificado (PSS) para suprir as demandas operacionais."
+        }
+    },
+    "CAMARA_VEREADORES": {
+        "LOGISTICA_E_GASTOS": {
+            "palavras_chave": ["diárias", "viagem", "reembolso", "indenizatória", "combustível", "prestação de contas"],
+            "base_legal": "Princípios da Economicidade e Moralidade (Art. 37, CF) & Lei de Responsabilidade Fiscal",
+            "jurisprudencia": "Resoluções e Precedentes de Sanções do TCM/BA sobre verbas de gabinete",
+            "gargalo_comum": "Concessão de verbas indenizatórias ou diárias sem a publicação imediata do relatório analítico de viagem ou comprovação do interesse público do município.",
+            "plano_de_acao": "Exigir a retenção cautelar do empenho até a inserção em ata e publicação oficial do certificado de participação ou relatório de atividades legislativas em até 5 dias úteis."
         }
     }
-]
+}
