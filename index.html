@@ -3,12 +3,9 @@
             try {
                 const resposta = await fetch('dados.json');
                 const d = await resposta.json();
-                
-                // Normaliza o objeto caso venha encapsulado em Array acidentalmente
                 const dados = Array.isArray(d) ? d[0] : d;
                 
                 if (dados) {
-                    // 1. Processamento da Coluna Executivo
                     if (dados.executivo) {
                         const gavetaPrefeito = document.getElementById('gaveta-prefeito');
                         if (gavetaPrefeito) {
@@ -29,7 +26,6 @@
                         }
                     }
                     
-                    // 2. Processamento da Coluna Legislativo
                     if (dados.legislativo) {
                         const gavetaCamara = document.getElementById('gaveta-portal-camara');
                         if (gavetaCamara) {
