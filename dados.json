@@ -12,8 +12,8 @@
         },
         "municipal": {
             "judiciario": {"nome": "Comarca Judiciária de Prado", "link": "https://www.tjba.jus.br"},
-            "executivo": {"nome": "Prefeitura Municipal de Prado", "link": "https://www.prado.ba.gov.br"},
-            "legislativo": {"nome": "Câmara Municipal de Vereadores", "link": "https://www.camaraprado.ba.gov.br"}
+            "executivo": {"nome": "Diário Oficial Eletrônico (DOEM)", "link": "https://doem.org.br/ba/prado"},
+            "legislativo": {"nome": "Estrutura Organizacional / Transparência", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
         },
         "blockchain": {
             "rede": "Polygon PoS Mainnet",
