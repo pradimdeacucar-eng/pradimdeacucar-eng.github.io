@@ -1,10 +1,10 @@
 {
   "executivo": {
     "diario_oficial": "https://doem.org.br/ba/prado/diarios/previsualizar/0jOveoaM",
-    "site_oficial": ""
+    "site_oficial": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"
   },
   "legislativo": {
-    "portal_camara": "",
+    "portal_camara": "https://www.camaraprado.ba.gov.br/",
     "transmissao_sessoes": ""
   }
 }
