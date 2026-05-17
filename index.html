@@ -3,52 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gêmeo Digital - Prado</title>
+    <title>Prado Veritas - Gêmeo Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0b0f19; color: #f3f4f6; font-family: sans-serif; }
     </style>
 </head>
 <body class="p-6">
-    <div class="max-w-4xl mx-auto space-y-6">
-        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl flex justify-between items-center">
+    <div class="max-w-6xl mx-auto space-y-6">
+        
+        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl flex justify-between items-center">
             <div>
-                <h1 class="text-xl font-bold tracking-wider text-slate-200">GÊMEO DIGITAL v1.2.1</h1>
-                <p class="text-xs text-slate-400">Monitoramento de Ativos e Portais Digitais - Prado/BA</p>
+                <h1 class="text-2xl font-black tracking-widest text-blue-500 font-mono">PRADO VERITAS</h1>
+                <p class="text-xs text-slate-400">Gêmeo Digital de Auditoria e Transparência Pública - Prado/BA</p>
             </div>
             <div class="flex items-center space-x-3 bg-slate-950 px-4 py-2 rounded-lg border border-slate-800">
-                <div id="status-led" class="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"></div>
-                <span id="status-text" class="text-xs font-mono text-slate-300">STATUS: AGUARDANDO_VARREDURA</span>
+                <div id="status-led" class="w-3 h-3 bg-green-400 rounded-full"></div>
+                <span id="status-text" class="text-xs font-mono text-slate-300">STATUS: VERITAS_SINC_OK</span>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-4">
-                <h2 class="text-sm font-bold uppercase tracking-widest text-blue-400 border-b border-slate-800 pb-2">📂 Poder Executivo</h2>
-                
-                <div class="flex justify-between items-center p-3 bg-slate-950 rounded-lg border border-slate-800/50">
-                    <span class="text-sm text-slate-300">Diário Oficial Municipal:</span>
-                    <div id="gaveta-prefeito" class="text-sm font-mono"></div>
-                </div>
-
-                <div class="flex justify-between items-center p-3 bg-slate-950 rounded-lg border border-slate-800/50">
-                    <span class="text-sm text-slate-300">Site Oficial da Prefeitura:</span>
-                    <div id="gaveta-site-executivo" class="text-sm font-mono"></div>
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl border-t-2 border-t-blue-500">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-blue-400 mb-2">📂 Poder Executivo</h2>
+                <div id="gaveta-prefeito" class="text-xs font-mono bg-slate-950 p-2 rounded border border-slate-800/60"></div>
             </div>
+            <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl border-t-2 border-t-yellow-500">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-yellow-500 mb-2">📂 Poder Legislativo</h2>
+                <div id="gaveta-portal-camara" class="text-xs font-mono bg-slate-950 p-2 rounded border border-slate-800/60"></div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl border-t-2 border-t-purple-500">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-purple-400 mb-2">📂 Poder Judiciário</h2>
+                <div id="gaveta-judiciario" class="text-xs font-mono bg-slate-950 p-2 rounded border border-slate-800/60"></div>
+            </div>
+        </div>
 
-            <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-4">
-                <h2 class="text-sm font-bold uppercase tracking-widest text-yellow-500 border-b border-slate-800 pb-2">📂 Poder Legislativo</h2>
-                
-                <div class="flex justify-between items-center p-3 bg-slate-950 rounded-lg border border-slate-800/50">
-                    <span class="text-sm text-slate-300">Portal da Câmara:</span>
-                    <div id="gaveta-portal-camara" class="text-sm font-mono"></div>
+        <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-4">
+            <h2 class="text-md font-bold text-emerald-400 border-b border-slate-800 pb-2">🗂️ Repositório Digital por Secretarias</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-slate-950 p-4 rounded-lg border border-slate-850 space-y-2">
+                    <span class="text-xs font-bold text-blue-400 block">🏛️ GABINETE DO PREFEITO</span>
+                    <div id="pasta-gabinete" class="space-y-2"></div>
+                </div>
+                <div class="bg-slate-950 p-4 rounded-lg border border-slate-850 space-y-2">
+                    <span class="text-xs font-bold text-orange-400 block">💼 SECRETARIA DE ADMINISTRAÇÃO</span>
+                    <div id="pasta-administracao" class="space-y-2"></div>
+                </div>
+                <div class="bg-slate-950 p-4 rounded-lg border border-slate-850 space-y-2">
+                    <span class="text-xs font-bold text-emerald-400 block">🏥 SECRETARIA DE SAÚDE</span>
+                    <div id="pasta-saude" class="space-y-2"></div>
+                </div>
+                <div class="bg-slate-950 p-4 rounded-lg border border-slate-850 space-y-2">
+                    <span class="text-xs font-bold text-cyan-400 block">⚖️ PROCURADORIA GERAL (PGM)</span>
+                    <div id="pasta-procuradoria" class="space-y-2"></div>
+                </div>
+                <div class="bg-slate-950 p-4 rounded-lg border border-slate-850 space-y-2">
+                    <span class="text-xs font-bold text-yellow-500 block">🏛️ CÂMARA DE VEREADORES</span>
+                    <div id="pasta-camara" class="space-y-2"></div>
+                </div>
+                <div class="bg-slate-950 p-4 rounded-lg border border-slate-850 space-y-2">
+                    <span class="text-xs font-bold text-purple-400 block">⚖️ COMARCA JUDICIÁRIA</span>
+                    <div id="pasta-judiciario-local" class="space-y-2"></div>
                 </div>
             </div>
         </div>
+
     </div>
 
     <script>
+        function renderizarItens(lista, elementoId) {
+            const container = document.getElementById(elementoId);
+            if (!container) return;
+            container.innerHTML = lista.map(item => `
+                <div class="p-2 bg-slate-900 rounded border border-slate-800 text-[11px] space-y-1">
+                    <div class="flex justify-between text-slate-400 font-mono text-[10px]">
+                        <span class="font-bold text-slate-300">${item.publicacao}</span>
+                        <span>${item.data}</span>
+                    </div>
+                    <p class="text-slate-400 font-sans">${item.assunto}</p>
+                </div>
+            `).join('');
+        }
+
         async function conectarRobo() {
             try {
                 const resposta = await fetch('dados.json');
@@ -56,46 +93,22 @@
                 const dados = Array.isArray(d) ? d[0] : d;
                 
                 if (dados) {
-                    // 1. Processamento da Coluna Executivo
-                    if (dados.executivo) {
-                        const gavetaPrefeito = document.getElementById('gaveta-prefeito');
-                        if (gavetaPrefeito) {
-                            if (dados.executivo.diario_oficial && dados.executivo.diario_oficial.trim() !== "") {
-                                gavetaPrefeito.innerHTML = `<a href="${dados.executivo.diario_oficial}" target="_blank" class="text-green-400 hover:underline font-bold animate-pulse">[VER DIÁRIO]</a>`;
-                            } else {
-                                gavetaPrefeito.innerHTML = `<span class="text-gray-600 font-bold">[VAZIO]</span>`;
-                            }
-                        }
-                        
-                        const gavetaSiteExec = document.getElementById('gaveta-site-executivo');
-                        if (gavetaSiteExec) {
-                            if (dados.executivo.site_oficial && dados.executivo.site_oficial.trim() !== "") {
-                                gavetaSiteExec.innerHTML = `<a href="${dados.executivo.site_oficial}" target="_blank" class="text-blue-400 hover:underline font-bold">[SITE ONLINE]</a>`;
-                            } else {
-                                gavetaSiteExec.innerHTML = `<span class="text-yellow-600 font-bold">[AGUARDANDO]</span>`;
-                            }
-                        }
+                    document.getElementById('gaveta-prefeito').innerHTML = `<a href="${dados.executivo.diario_oficial}" target="_blank" class="text-green-400 hover:underline">[VER DIÁRIO OFICIAL]</a>`;
+                    document.getElementById('gaveta-portal-camara').innerHTML = `<a href="${dados.legislativo.portal_camara}" target="_blank" class="text-yellow-400 hover:underline">[PORTAL DA CÂMARA]</a>`;
+                    document.getElementById('gaveta-judiciario').innerHTML = `<a href="${dados.judiciario.portal_tjba}" target="_blank" class="text-purple-400 hover:underline">[PORTAL TJBA]</a>`;
+
+                    if (dados.pastas) {
+                        renderizarItens(dados.pastas.gabinete_prefeito, 'pasta-gabinete');
+                        renderizarItens(dados.pastas.administracao, 'pasta-administracao');
+                        renderizarItens(dados.pastas.saude, 'pasta-saude');
+                        renderizarItens(dados.pastas.procuradoria, 'pasta-procuradoria');
+                        renderizarItens(dados.pastas.camara_vereadores, 'pasta-camara');
+                        renderizarItens(dados.pastas.judiciario_comarca, 'pasta-judiciario-local');
                     }
-                    
-                    // 2. Processamento da Coluna Legislativo
-                    if (dados.legislativo) {
-                        const gavetaCamara = document.getElementById('gaveta-portal-camara');
-                        if (gavetaCamara) {
-                            if (dados.legislativo.portal_camara && dados.legislativo.portal_camara.trim() !== "") {
-                                gavetaCamara.innerHTML = `<a href="${dados.legislativo.portal_camara}" target="_blank" class="text-yellow-400 hover:underline font-bold animate-pulse">[PORTAL ATIVO]</a>`;
-                            } else {
-                                gavetaCamara.innerHTML = `<span class="text-gray-600 font-bold">[VAZIO]</span>`;
-                            }
-                        }
-                    }
-                    
-                    document.getElementById('status-led').className = "w-3 h-3 bg-green-400 rounded-full animate-none";
-                    document.getElementById('status-text').innerText = "STATUS: VERITAS_SINC_OK";
                 }
             } catch (erro) {
-                console.error("Erro na varredura da matriz:", erro);
-                document.getElementById('status-led').className = "w-3 h-3 bg-red-500 rounded-full animate-pulse";
-                document.getElementById('status-text').innerText = "STATUS: ERRO_MATRIZ_DADOS";
+                document.getElementById('status-led').className = "w-3 h-3 bg-red-500 rounded-full";
+                document.getElementById('status-text').innerText = "STATUS: ERRO_ARQUIVO_JSON";
             }
         }
         window.onload = conectarRobo;

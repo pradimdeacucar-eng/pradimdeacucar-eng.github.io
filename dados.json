@@ -1,10 +1,34 @@
-{
-  "executivo": {
-    "diario_oficial": "https://doem.org.br/ba/prado/diarios/previsualizar/0jOveoaM",
-    "site_oficial": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"
-  },
-  "legislativo": {
-    "portal_camara": "https://www.camaraprado.ba.gov.br/",
-    "transmissao_sessoes": ""
-  }
-}
+[
+    {
+        "executivo": {
+            "diario_oficial": "https://www.prado.ba.gov.br/site/diariooficial",
+            "site_oficial": "https://www.prado.ba.gov.br"
+        },
+        "legislativo": {
+            "portal_camara": "https://www.camaraprado.ba.gov.br"
+        },
+        "judiciario": {
+            "portal_tjba": "https://www.tjba.jus.br"
+        },
+        "pastas": {
+            "gabinete_prefeito": [
+                {"publicacao": "Decreto Municipal", "data": "Aguardando Bot", "assunto": "Aguardando varredura de atos do gabinete...", "link": "#"}
+            ],
+            "administracao": [
+                {"publicacao": "Atos Administrativos", "data": "Aguardando Bot", "assunto": "Aguardando varredura de licitações e contratos...", "link": "#"}
+            ],
+            "saude": [
+                {"publicacao": "Fundo Mun. de Saúde", "data": "Aguardando Bot", "assunto": "Aguardando mapeamento de portarias da Saúde...", "link": "#"}
+            ],
+            "procuradoria": [
+                {"publicacao": "Pareceres PGM", "data": "Aguardando Bot", "assunto": "Aguardando indexação de pareceres jurídicos...", "link": "#"}
+            ],
+            "camara_vereadores": [
+                {"publicacao": "Projetos de Lei", "data": "Aguardando Bot", "assunto": "Aguardando leitura de pautas da Câmara...", "link": "#"}
+            ],
+            "judiciario_comarca": [
+                {"publicacao": "Movimentações", "data": "Aguardando Bot", "assunto": "Aguardando extração de editais do TJBA...", "link": "#"}
+            ]
+        }
+    }
+]
