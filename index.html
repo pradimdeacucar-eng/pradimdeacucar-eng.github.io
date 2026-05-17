@@ -6,96 +6,98 @@
     <title>Prado Veritas - Gêmeo Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0b0f19; color: #f3f4f6; font-family: sans-serif; }
+        body { background-color: #060913; color: #f3f4f6; font-family: system-ui, -apple-system, sans-serif; }
     </style>
 </head>
-<body class="p-6">
+<body class="p-6 antialiased">
     <div class="max-w-6xl mx-auto space-y-6">
         
-        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl flex justify-between items-center">
+        <div class="bg-slate-900/80 border border-slate-800 p-5 rounded-xl flex justify-between items-center backdrop-blur-sm">
             <div>
-                <h1 class="text-2xl font-black tracking-widest text-blue-500 font-mono">PRADO VERITAS</h1>
-                <p class="text-xs text-slate-400">Gêmeo Digital de Auditoria Territorial e Governança Imutável - Prado/BA</p>
+                <h1 class="text-xl font-black tracking-widest text-blue-500 font-mono">PRADO VERITAS</h1>
+                <p class="text-xs text-slate-400 mt-0.5">Gêmeo Digital de Auditoria Territorial e Governança Imutável - Prado/BA</p>
             </div>
             <div class="flex items-center space-x-3 bg-slate-950 px-4 py-2 rounded-lg border border-slate-800">
-                <div id="status-led" class="w-3 h-3 bg-green-400 rounded-full"></div>
-                <span id="status-text" class="text-xs font-mono text-slate-300">STATUS: CONECTADO</span>
+                <div id="status-led" class="w-2.5 h-2.5 bg-yellow-500 rounded-full animate-pulse"></div>
+                <span id="status-text" class="text-xs font-mono text-slate-400">SINC_RUNNING</span>
             </div>
         </div>
 
         <div class="space-y-4">
-            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 font-mono">🌐 Matriz Hierárquica de Monitoramento</h2>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 font-mono flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Matriz Hierárquica de Monitoramento
+            </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-slate-900/40 p-3 rounded-xl border border-slate-800/60">
-                <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-[10px] text-blue-400 font-bold block mb-1">🌎 FED / JUDICIÁRIO</span><div id="fed-jud"></div></div>
-                <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-[10px] text-blue-400 font-bold block mb-1">🌎 FED / EXECUTIVO</span><div id="fed-exec"></div></div>
-                <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-[10px] text-blue-400 font-bold block mb-1">🌎 FED / LEGISLATIVO</span><div id="fed-leg"></div></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-slate-900/30 p-3 rounded-xl border border-slate-800/60">
+                <div class="bg-slate-950 p-3 rounded-lg border border-slate-800/40"><span class="text-[10px] text-blue-400 font-mono font-bold block mb-1">FEDERAL / JUDICIÁRIO</span><div id="fed-jud" class="min-h-[20px]"></div></div>
+                <div class="bg-slate-950 p-3 rounded-lg border border-slate-800/40"><span class="text-[10px] text-blue-400 font-mono font-bold block mb-1">FEDERAL / EXECUTIVO</span><div id="fed-exec" class="min-h-[20px]"></div></div>
+                <div class="bg-slate-950 p-3 rounded-lg border border-slate-800/40"><span class="text-[10px] text-blue-400 font-mono font-bold block mb-1">FEDERAL / LEGISLATIVO</span><div id="fed-leg" class="min-h-[20px]"></div></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-slate-900/40 p-3 rounded-xl border border-slate-800/60">
-                <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-[10px] text-purple-400 font-bold block mb-1">🛡️ EST / JUDICIÁRIO</span><div id="est-jud"></div></div>
-                <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-[10px] text-purple-400 font-bold block mb-1">🛡️ EST / EXECUTIVO</span><div id="est-exec"></div></div>
-                <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-[10px] text-purple-400 font-bold block mb-1">🛡️ EST / LEGISLATIVO</span><div id="est-leg"></div></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-slate-900/30 p-3 rounded-xl border border-slate-800/60">
+                <div class="bg-slate-950 p-3 rounded-lg border border-slate-800/40"><span class="text-[10px] text-purple-400 font-mono font-bold block mb-1">ESTADUAL / JUDICIÁRIO</span><div id="est-jud" class="min-h-[20px]"></div></div>
+                <div class="bg-slate-950 p-3 rounded-lg border border-slate-800/40"><span class="text-[10px] text-purple-400 font-mono font-bold block mb-1">ESTADUAL / EXECUTIVO</span><div id="est-exec" class="min-h-[20px]"></div></div>
+                <div class="bg-slate-950 p-3 rounded-lg border border-slate-800/40"><span class="text-[10px] text-purple-400 font-mono font-bold block mb-1">ESTADUAL / LEGISLATIVO</span><div id="est-leg" class="min-h-[20px]"></div></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-slate-900/40 p-3 rounded-xl border border-slate-800/60">
-                <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-[10px] text-emerald-400 font-bold block mb-1">🏙️ MUN / JUDICIÁRIO</span><div id="mun-jud"></div></div>
-                <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-[10px] text-emerald-400 font-bold block mb-1">🏙️ MUN / EXECUTIVO</span><div id="mun-exec"></div></div>
-                <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-[10px] text-emerald-400 font-bold block mb-1">🏙️ MUN / LEGISLATIVO</span><div id="mun-leg"></div></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-slate-900/30 p-3 rounded-xl border border-slate-800/60">
+                <div class="bg-slate-950 p-3 rounded-lg border border-slate-800/40"><span class="text-[10px] text-emerald-400 font-mono font-bold block mb-1">MUNICIPAL / JUDICIÁRIO</span><div id="mun-jud" class="min-h-[20px]"></div></div>
+                <div class="bg-slate-950 p-3 rounded-lg border border-slate-800/40"><span class="text-[10px] text-emerald-400 font-mono font-bold block mb-1">MUNICIPAL / EXECUTIVO</span><div id="mun-exec" class="min-h-[20px]"></div></div>
+                <div class="bg-slate-950 p-3 rounded-lg border border-slate-800/40"><span class="text-[10px] text-emerald-400 font-mono font-bold block mb-1">MUNICIPAL / LEGISLATIVO</span><div id="mun-leg" class="min-h-[20px]"></div></div>
             </div>
         </div>
 
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-4">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
-                <h2 class="text-sm font-bold text-purple-400 uppercase tracking-wider flex items-center gap-2">
-                    ⛓️ Vitrine de Auditoria Territorial - Negociação P2P Direta
+        <div class="bg-slate-900/40 border border-slate-800 p-6 rounded-xl space-y-4">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                <h2 class="text-sm font-bold text-purple-400 uppercase tracking-wider flex items-center gap-2 font-mono">
+                    ⬡ Vitrine de Auditoria Territorial & Liquidação P2P
                 </h2>
-                <span id="chain-tag" class="text-[10px] bg-purple-950 text-purple-300 border border-purple-800 font-mono px-2 py-0.5 rounded">CONECTANDO...</span>
+                <span id="chain-tag" class="text-[10px] bg-purple-950 text-purple-300 border border-purple-800 font-mono px-2.5 py-0.5 rounded tracking-wide">CONNECTING_BLOCKCHAIN...</span>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
+                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 flex flex-col justify-between hover:border-purple-900/40 transition-all duration-300 group">
                     <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="text-[10px] font-bold text-purple-400 font-mono">VERITAS-NFT #001</span>
-                            <span class="text-[9px] bg-green-950 text-green-400 px-1.5 py-0.5 rounded font-mono">IMUTÁVEL</span>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-[10px] font-bold text-purple-400 font-mono bg-purple-950/30 px-2 py-0.5 rounded border border-purple-900/20">ID #001</span>
+                            <span class="text-[9px] bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded font-mono font-bold border border-emerald-900/30">AUDITADO</span>
                         </div>
-                        <h3 class="text-xs font-bold text-slate-200">Decretos Executivos Municipais</h3>
-                        <p class="text-[11px] text-slate-400 mt-1">Metadados de auditoria e hashes de autenticidade territorial gravados em bloco.</p>
+                        <h3 class="text-xs font-bold text-slate-200 tracking-wide group-hover:text-purple-400 transition-colors">Atos Oficiais e Decretos</h3>
+                        <p class="text-[11px] text-slate-400 mt-1.5 leading-relaxed">Metadados fiscais e comprovação temporal indexados nativamente on-chain.</p>
                     </div>
-                    <div class="mt-4 pt-2 border-t border-slate-900 flex justify-between items-center">
-                        <span class="text-[10px] font-mono text-slate-500">Rede Polygon</span>
-                        <a id="p2p-btn-1" href="#" target="_blank" class="text-[11px] bg-purple-600 hover:bg-purple-700 text-white font-bold px-3 py-1 rounded transition-colors font-mono">ACESSAR P2P</a>
+                    <div class="mt-5 pt-3 border-t border-slate-900/80 flex justify-between items-center">
+                        <span class="text-[10px] font-mono text-slate-500">Polygon Network</span>
+                        <a id="p2p-btn-1" href="#" target="_blank" class="text-[11px] bg-purple-600 hover:bg-purple-700 text-white font-bold px-4 py-1.5 rounded-lg transition-colors font-mono">P2P ACCESS</a>
                     </div>
                 </div>
 
-                <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
+                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 flex flex-col justify-between hover:border-purple-900/40 transition-all duration-300 group">
                     <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="text-[10px] font-bold text-purple-400 font-mono">VERITAS-NFT #002</span>
-                            <span class="text-[9px] bg-green-950 text-green-400 px-1.5 py-0.5 rounded font-mono">IMUTÁVEL</span>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-[10px] font-bold text-purple-400 font-mono bg-purple-950/30 px-2 py-0.5 rounded border border-purple-900/20">ID #002</span>
+                            <span class="text-[9px] bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded font-mono font-bold border border-emerald-900/30">AUDITADO</span>
                         </div>
-                        <h3 class="text-xs font-bold text-slate-200">Contratos e Licitações Públicas</h3>
-                        <p class="text-[11px] text-slate-400 mt-1">Registros de empenhos fiscais consolidados e verificáveis de forma descentralizada.</p>
+                        <h3 class="text-xs font-bold text-slate-200 tracking-wide group-hover:text-purple-400 transition-colors">Contratos & Licitações</h3>
+                        <p class="text-[11px] text-slate-400 mt-1.5 leading-relaxed">Encapsulamento de contratos públicos em tokens não-fungíveis para verificação transparente.</p>
                     </div>
-                    <div class="mt-4 pt-2 border-t border-slate-900 flex justify-between items-center">
-                        <span class="text-[10px] font-mono text-slate-500">Rede Polygon</span>
-                        <a id="p2p-btn-2" href="#" target="_blank" class="text-[11px] bg-purple-600 hover:bg-purple-700 text-white font-bold px-3 py-1 rounded transition-colors font-mono">ACESSAR P2P</a>
+                    <div class="mt-5 pt-3 border-t border-slate-900/80 flex justify-between items-center">
+                        <span class="text-[10px] font-mono text-slate-500">Polygon Network</span>
+                        <a id="p2p-btn-2" href="#" target="_blank" class="text-[11px] bg-purple-600 hover:bg-purple-700 text-white font-bold px-4 py-1.5 rounded-lg transition-colors font-mono">P2P ACCESS</a>
                     </div>
                 </div>
 
-                <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
+                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 flex flex-col justify-between hover:border-purple-900/40 transition-all duration-300 group">
                     <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="text-[10px] font-bold text-purple-400 font-mono">VERITAS-NFT #003</span>
-                            <span class="text-[9px] bg-green-950 text-green-400 px-1.5 py-0.5 rounded font-mono">IMUTÁVEL</span>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-[10px] font-bold text-purple-400 font-mono bg-purple-950/30 px-2 py-0.5 rounded border border-purple-900/20">ID #003</span>
+                            <span class="text-[9px] bg-emerald-950 text-emerald-400 px-2 py-0.5 rounded font-mono font-bold border border-emerald-900/30">AUDITADO</span>
                         </div>
-                        <h3 class="text-xs font-bold text-slate-200">Atas e Resoluções do Legislativo</h3>
-                        <p class="text-[11px] text-slate-400 mt-1">Tokenização das sessões plenárias e votações da Câmara de Vereadores.</p>
+                        <h3 class="text-xs font-bold text-slate-200 tracking-wide group-hover:text-purple-400 transition-colors">Atas e Resoluções Legislativas</h3>
+                        <p class="text-[11px] text-slate-400 mt-1.5 leading-relaxed">Histórico de votações parlamentares e vetos imutabilizados em blocos criptográficos.</p>
                     </div>
-                    <div class="mt-4 pt-2 border-t border-slate-900 flex justify-between items-center">
-                        <span class="text-[10px] font-mono text-slate-500">Rede Polygon</span>
-                        <a id="p2p-btn-3" href="#" target="_blank" class="text-[11px] bg-purple-600 hover:bg-purple-700 text-white font-bold px-3 py-1 rounded transition-colors font-mono">ACESSAR P2P</a>
+                    <div class="mt-5 pt-3 border-t border-slate-900/80 flex justify-between items-center">
+                        <span class="text-[10px] font-mono text-slate-500">Polygon Network</span>
+                        <a id="p2p-btn-3" href="#" target="_blank" class="text-[11px] bg-purple-600 hover:bg-purple-700 text-white font-bold px-4 py-1.5 rounded-lg transition-colors font-mono">P2P ACCESS</a>
                     </div>
                 </div>
             </div>
@@ -104,45 +106,53 @@
     </div>
 
     <script>
-        async function carregarVeritas() {
+        async function fetchSystemData() {
             try {
-                const resposta = await fetch('dados.json');
-                if (!resposta.ok) throw new Error('Erro na leitura do banco de dados');
-                const d = await resposta.json();
-                const dados = Array.isArray(d) ? d[0] : d;
+                // Previne cache agressivo forçando atualização limpa do JSON
+                const res = await fetch(`dados.json?nocache=${Date.now()}`);
+                if (!res.ok) throw new Error();
+                const rawData = await res.json();
+                const dataset = Array.isArray(rawData) ? rawData[0] : rawData;
                 
-                if (dados) {
-                    // Preenchimento Dinâmico da Matriz de Esferas
-                    document.getElementById('fed-jud').innerHTML = `<a href="${dados.federal.judiciario.link}" target="_blank" class="text-blue-400 hover:underline font-mono text-xs">${dados.federal.judiciario.nome}</a>`;
-                    document.getElementById('fed-exec').innerHTML = `<a href="${dados.federal.executivo.link}" target="_blank" class="text-blue-400 hover:underline font-mono text-xs">${dados.federal.executivo.nome}</a>`;
-                    document.getElementById('fed-leg').innerHTML = `<a href="${dados.federal.legislativo.link}" target="_blank" class="text-blue-400 hover:underline font-mono text-xs">${dados.federal.legislativo.nome}</a>`;
+                if (dataset) {
+                    // Renderização de nós - Esfera Federal
+                    document.getElementById('fed-jud').innerHTML = `<a href="${dataset.federal.judiciario.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-blue-400 transition-colors">${dataset.federal.judiciario.nome}</a>`;
+                    document.getElementById('fed-exec').innerHTML = `<a href="${dataset.federal.executivo.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-blue-400 transition-colors">${dataset.federal.executivo.nome}</a>`;
+                    document.getElementById('fed-leg').innerHTML = `<a href="${dataset.federal.legislativo.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-blue-400 transition-colors">${dataset.federal.legislativo.nome}</a>`;
 
-                    document.getElementById('est-jud').innerHTML = `<a href="${dados.estadual.judiciario.link}" target="_blank" class="text-purple-400 hover:underline font-mono text-xs">${dados.estadual.judiciario.nome}</a>`;
-                    document.getElementById('est-exec').innerHTML = `<a href="${dados.estadual.executivo.link}" target="_blank" class="text-purple-400 hover:underline font-mono text-xs">${dados.estadual.executivo.nome}</a>`;
-                    document.getElementById('est-leg').innerHTML = `<a href="${dados.estadual.legislativo.link}" target="_blank" class="text-purple-400 hover:underline font-mono text-xs">${dados.estadual.legislativo.nome}</a>`;
+                    // Renderização de nós - Esfera Estadual
+                    document.getElementById('est-jud').innerHTML = `<a href="${dataset.estadual.judiciario.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-purple-400 transition-colors">${dataset.estadual.judiciario.nome}</a>`;
+                    document.getElementById('est-exec').innerHTML = `<a href="${dataset.estadual.executivo.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-purple-400 transition-colors">${dataset.estadual.executivo.nome}</a>`;
+                    document.getElementById('est-leg').innerHTML = `<a href="${dataset.estadual.legislativo.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-purple-400 transition-colors">${dataset.estadual.legislativo.nome}</a>`;
 
-                    document.getElementById('mun-jud').innerHTML = `<a href="${dados.municipal.judiciario.link}" target="_blank" class="text-emerald-400 hover:underline font-mono text-xs">${dados.municipal.judiciario.nome}</a>`;
-                    document.getElementById('mun-exec').innerHTML = `<a href="${dados.municipal.executivo.link}" target="_blank" class="text-emerald-400 hover:underline font-mono text-xs">${dados.municipal.executivo.nome}</a>`;
-                    document.getElementById('mun-leg').innerHTML = `<a href="${dados.municipal.legislativo.link}" target="_blank" class="text-emerald-400 hover:underline font-mono text-xs">${dados.municipal.legislativo.nome}</a>`;
+                    // Renderização de nós - Esfera Municipal
+                    document.getElementById('mun-jud').innerHTML = `<a href="${dataset.municipal.judiciario.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-emerald-400 transition-colors">${dataset.municipal.judiciario.nome}</a>`;
+                    document.getElementById('mun-exec').innerHTML = `<a href="${dataset.municipal.executivo.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-emerald-400 transition-colors">${dataset.municipal.executivo.nome}</a>`;
+                    document.getElementById('mun-leg').innerHTML = `<a href="${dataset.municipal.legislativo.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-emerald-400 transition-colors">${dataset.municipal.legislativo.nome}</a>`;
 
-                    // Configuração da Vitrine P2P sem intermediários
-                    document.getElementById('chain-tag').innerText = dados.blockchain.rede + " | " + dados.blockchain.status_auditoria;
-                    
-                    document.getElementById('p2p-btn-1').href = dados.blockchain.p2p_link;
-                    document.getElementById('p2p-btn-2').href = dados.blockchain.p2p_link;
-                    document.getElementById('p2p-btn-3').href = dados.blockchain.p2p_link;
+                    // Mapeamento Web3/P2P Gateway
+                    document.getElementById('chain-tag').innerText = `${dataset.blockchain.rede} | ${dataset.blockchain.status_auditoria}`;
+                    document.getElementById('p2p-btn-1').href = dataset.blockchain.p2p_link;
+                    document.getElementById('p2p-btn-2').href = dataset.blockchain.p2p_link;
+                    document.getElementById('p2p-btn-3').href = dataset.blockchain.p2p_link;
 
-                    document.getElementById('status-text').className = "text-xs font-mono text-green-400";
-                    document.getElementById('status-text').innerText = "STATUS: VERITAS_SINC_OK";
+                    // Alteração de Estado de Sinalização para Concluído
+                    const led = document.getElementById('status-led');
+                    led.className = "w-2.5 h-2.5 bg-emerald-500 rounded-full";
+                    const txt = document.getElementById('status-text');
+                    txt.className = "text-xs font-mono text-emerald-400 font-bold";
+                    txt.innerText = "VERITAS_SINC_OK";
                 }
-            } catch (erro) {
-                document.getElementById('status-led').className = "w-3 h-3 bg-red-500 rounded-full";
-                document.getElementById('status-text').className = "text-xs font-mono text-red-500";
-                document.getElementById('status-text').innerText = "STATUS: ERRO_ARQUIVO_JSON";
-                console.error(erro);
+            } catch (err) {
+                // Fallback de Falha Estrutural no Objeto JSON
+                const led = document.getElementById('status-led');
+                led.className = "w-2.5 h-2.5 bg-red-500 rounded-full";
+                const txt = document.getElementById('status-text');
+                txt.className = "text-xs font-mono text-red-500 font-bold";
+                txt.innerText = "ERRO_ARQUIVO_JSON";
             }
         }
-        window.onload = carregarVeritas;
+        window.onload = fetchSystemData;
     </script>
 </body>
 </html>
