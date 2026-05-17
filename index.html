@@ -65,8 +65,8 @@
                     <span class="text-xs font-bold ${corTexto} uppercase tracking-wider block">📌 ${titulo}</span>
                     <div class="p-2 bg-slate-900 rounded border border-slate-800 text-[11px] space-y-1">
                         <span class="font-bold text-slate-300 block">${item.publicacao}</span>
-                        <p class="text-slate-400 font-sans">${item.assunto}</p>
-                        ${item.link !== '#' ? `<a href="${item.link}" target="_blank" class="text-blue-400 hover:underline block text-[10px] mt-1 font-mono font-bold">🔗 ACESSAR FONTE</a>` : ''}
+                        <p class="text-slate-400 font-sans mb-2">${item.assunto}</p>
+                        ${item.link !== '#' ? `<a href="${item.link}" target="_blank" class="text-blue-400 hover:underline block text-[10px] font-mono font-bold">🔗 ACESSAR ESTRUTURA OFICIAL</a>` : ''}
                     </div>
                 </div>
             `;
@@ -96,8 +96,8 @@
                     const pref = dados.organograma_prefeitura;
                     document.getElementById('container-prefeitura').innerHTML = 
                         criarCard("Gabinete do Prefeito", pref.gabinete_prefeito, "text-blue-400") +
-                        criarCard("Procuradoria Geral (PGM)", pref.procuradoria_geral, "text-cyan-400") +
-                        criarCard("Controladoria Geral (CGM)", pref.controladoria_generall, "text-indigo-400") +
+                        criarCard("Procuradoria Geral (PGM)", pref.procuradoria_generall || pref.procuradoria_geral, "text-cyan-400") +
+                        criarCard("Controladoria Geral (CGM)", pref.controladoria_geral, "text-indigo-400") +
                         criarCard("Secretaria de Administração", pref.administracao, "text-orange-400") +
                         criarCard("Secretaria de Finanças", pref.financas, "text-amber-400") +
                         criarCard("Secretaria de Saúde", pref.saude, "text-emerald-400") +
@@ -112,10 +112,12 @@
                         criarCard("Comissões Permanentes", cam.comissoes, "text-yellow-400") +
                         criarCard("Plenário Deliberativo", cam.plenario, "text-yellow-300");
 
+                    document.getElementById('status-text').className = "text-xs font-mono text-green-400";
                     document.getElementById('status-text').innerText = "STATUS: VERITAS_MAPPED_OK";
                 }
             } catch (erro) {
                 document.getElementById('status-led').className = "w-3 h-3 bg-red-500 rounded-full";
+                document.getElementById('status-text').className = "text-xs font-mono text-red-500";
                 document.getElementById('status-text').innerText = "STATUS: ERRO_ARQUIVO_JSON";
             }
         }

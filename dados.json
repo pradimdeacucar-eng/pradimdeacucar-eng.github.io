@@ -12,47 +12,47 @@
         },
         "municipal": {
             "judiciario": {"nome": "Comarca Judiciária de Prado", "link": "https://www.tjba.jus.br"},
-            "executivo": {"nome": "Prefeitura Municipal de Prado", "link": "https://www.prado.ba.gov.br"},
-            "legislativo": {"nome": "Câmara Municipal de Vereadores", "link": "https://www.camaraprado.ba.gov.br"}
+            "executivo": {"nome": "Diário Oficial do Município (DOEM)", "link": "https://doem.org.br/ba/prado"},
+            "legislativo": {"nome": "Câmara Municipal de Prado", "link": "https://www.camaraprado.ba.gov.br/"}
         },
         "organograma_prefeitura": {
             "gabinete_prefeito": [
-                {"publicacao": "Gabinete", "assunto": "Atos de Chefia, Decretos de Nomeação e Agendas Oficiais.", "link": "#"}
+                {"publicacao": "Gabinete", "assunto": "Atos de Chefia, Decretos de Nomeação e Agendas Oficiais.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
             ],
             "procuradoria_geral": [
-                {"publicacao": "PGM", "assunto": "Pareceres Jurídicos, Defesas da Municipalidade e Contratos.", "link": "#"}
+                {"publicacao": "PGM", "assunto": "Pareceres Jurídicos, Defesas da Municipalidade e Contratos.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
             ],
             "controladoria_geral": [
-                {"publicacao": "CGM", "assunto": "Auditorias Internas, Fiscalização de Gastos e Transparência.", "link": "#"}
+                {"publicacao": "CGM", "assunto": "Auditorias Internas, Fiscalização de Gastos e Transparência.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
             ],
             "administracao": [
-                {"publicacao": "Sec. Administração", "assunto": "Licitações, Recursos Humanos, Pregões e Contratos.", "link": "#"}
+                {"publicacao": "Sec. Administração", "assunto": "Licitações, Recursos Humanos, Pregões e Contratos.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
             ],
             "financas": [
-                {"publicacao": "Sec. Finanças", "assunto": "Orçamento Municipal, Arrecadação, Tributos e PPA.", "link": "#"}
+                {"publicacao": "Sec. Finanças", "assunto": "Orçamento Municipal, Arrecadação, Tributos e PPA.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
             ],
             "saude": [
-                {"publicacao": "Sec. Saúde / FMS", "assunto": "Gestão do SUS, Portarias do Fundo de Saúde e Insumos.", "link": "#"}
+                {"publicacao": "Sec. Saúde / FMS", "assunto": "Gestão do SUS, Portarias do Fundo de Saúde e Insumos.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
             ],
             "educacao": [
-                {"publicacao": "Sec. Educação", "assunto": "Fundeb, Merenda Escolar, Editais e Gestão Pedagógica.", "link": "#"}
+                {"publicacao": "Sec. Educação", "assunto": "Fundeb, Merenda Escolar, Editais e Gestão Pedagógica.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
             ],
             "obras_servicos": [
-                {"publicacao": "Sec. Obras", "assunto": "Infraestrutura Urbana, Saneamento e Limpeza Pública.", "link": "#"}
+                {"publicacao": "Sec. Obras", "assunto": "Infraestrutura Urbana, Saneamento e Limpeza Pública.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
             ],
             "assistencia_social": [
-                {"publicacao": "Sec. Social", "assunto": "Programas Sociais, Cras, Creas e Benefícios.", "link": "#"}
+                {"publicacao": "Sec. Social", "assunto": "Programas Sociais, Cras, Creas e Benefícios.", "link": "https://www.acessoinformacao.com.br/ba/prado/estrutura-organizacional/"}
             ]
         },
         "organograma_camara": {
             "mesa_diretora": [
-                {"publicacao": "Mesa Diretora", "assunto": "Atos da Presidência, Portarias Internas e Resoluções.", "link": "#"}
+                {"publicacao": "Mesa Diretora", "assunto": "Atos da Presidência, Portarias Internas e Resoluções.", "link": "https://www.camaraprado.ba.gov.br/"}
             ],
             "comissoes": [
-                {"publicacao": "Comissões", "assunto": "Pareceres de Constituição, Justiça, Finanças e Orçamento.", "link": "#"}
+                {"publicacao": "Comissões", "assunto": "Pareceres de Constituição, Justiça, Finanças e Orçamento.", "link": "https://www.camaraprado.ba.gov.br/"}
             ],
             "plenario": [
-                {"publicacao": "Plenário", "assunto": "Projetos de Lei, Votações, Requerimentos e Atas de Sessão.", "link": "#"}
+                {"publicacao": "Plenário", "assunto": "Projetos de Lei, Votações, Requerimentos e Atas de Sessão.", "link": "https://www.camaraprado.ba.gov.br/"}
             ]
         }
     }
