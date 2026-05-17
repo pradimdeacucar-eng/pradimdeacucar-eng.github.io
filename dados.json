@@ -1,22 +1,59 @@
 [
     {
-        "executivo": {
-            "diario_oficial": "https://www.prado.ba.gov.br/site/diariooficial",
-            "site_oficial": "https://www.prado.ba.gov.br"
+        "federal": {
+            "judiciario": {"nome": "Supremo Tribunal Federal", "link": "https://portal.stf.jus.br"},
+            "executivo": {"nome": "Presidência da República / DOU", "link": "https://www.in.gov.br"},
+            "legislativo": {"nome": "Congresso Nacional (Câmara e Senado)", "link": "https://www.gov.br"}
         },
-        "legislativo": {
-            "portal_camara": "https://www.camaraprado.ba.gov.br"
+        "estadual": {
+            "judiciario": {"nome": "Tribunal de Justiça da Bahia (TJBA)", "link": "https://www.tjba.jus.br"},
+            "executivo": {"nome": "Governo do Estado / Diário Oficial BA", "link": "https://www.ba.gov.br/diario-oficial"},
+            "legislativo": {"nome": "Assembleia Legislativa da Bahia (ALBA)", "link": "https://www.al.ba.gov.br"}
         },
-        "judiciario": {
-            "portal_tjba": "https://www.tjba.jus.br"
+        "municipal": {
+            "judiciario": {"nome": "Comarca Judiciária de Prado", "link": "https://www.tjba.jus.br"},
+            "executivo": {"nome": "Prefeitura Municipal de Prado", "link": "https://www.prado.ba.gov.br"},
+            "legislativo": {"nome": "Câmara Municipal de Vereadores", "link": "https://www.camaraprado.ba.gov.br"}
         },
-        "pastas": {
-            "gabinete_prefeito": [],
-            "administracao": [],
-            "saude": [],
-            "procuradoria": [],
-            "camara_vereadores": [],
-            "judiciario_comarca": []
+        "organograma_prefeitura": {
+            "gabinete_prefeito": [
+                {"publicacao": "Gabinete", "assunto": "Atos de Chefia, Decretos de Nomeação e Agendas Oficiais.", "link": "#"}
+            ],
+            "procuradoria_geral": [
+                {"publicacao": "PGM", "assunto": "Pareceres Jurídicos, Defesas da Municipalidade e Contratos.", "link": "#"}
+            ],
+            "controladoria_geral": [
+                {"publicacao": "CGM", "assunto": "Auditorias Internas, Fiscalização de Gastos e Transparência.", "link": "#"}
+            ],
+            "administracao": [
+                {"publicacao": "Sec. Administração", "assunto": "Licitações, Recursos Humanos, Pregões e Contratos.", "link": "#"}
+            ],
+            "financas": [
+                {"publicacao": "Sec. Finanças", "assunto": "Orçamento Municipal, Arrecadação, Tributos e PPA.", "link": "#"}
+            ],
+            "saude": [
+                {"publicacao": "Sec. Saúde / FMS", "assunto": "Gestão do SUS, Portarias do Fundo de Saúde e Insumos.", "link": "#"}
+            ],
+            "educacao": [
+                {"publicacao": "Sec. Educação", "assunto": "Fundeb, Merenda Escolar, Editais e Gestão Pedagógica.", "link": "#"}
+            ],
+            "obras_servicos": [
+                {"publicacao": "Sec. Obras", "assunto": "Infraestrutura Urbana, Saneamento e Limpeza Pública.", "link": "#"}
+            ],
+            "assistencia_social": [
+                {"publicacao": "Sec. Social", "assunto": "Programas Sociais, Cras, Creas e Benefícios.", "link": "#"}
+            ]
+        },
+        "organograma_camara": {
+            "mesa_diretora": [
+                {"publicacao": "Mesa Diretora", "assunto": "Atos da Presidência, Portarias Internas e Resoluções.", "link": "#"}
+            ],
+            "comissoes": [
+                {"publicacao": "Comissões", "assunto": "Pareceres de Constituição, Justiça, Finanças e Orçamento.", "link": "#"}
+            ],
+            "plenario": [
+                {"publicacao": "Plenário", "assunto": "Projetos de Lei, Votações, Requerimentos e Atas de Sessão.", "link": "#"}
+            ]
         }
     }
 ]
