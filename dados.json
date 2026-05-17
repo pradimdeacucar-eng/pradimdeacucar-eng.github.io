@@ -11,24 +11,12 @@
             "portal_tjba": "https://www.tjba.jus.br"
         },
         "pastas": {
-            "gabinete_prefeito": [
-                {"publicacao": "Decreto Municipal", "data": "Aguardando Bot", "assunto": "Aguardando varredura de atos do gabinete...", "link": "#"}
-            ],
-            "administracao": [
-                {"publicacao": "Atos Administrativos", "data": "Aguardando Bot", "assunto": "Aguardando varredura de licitações e contratos...", "link": "#"}
-            ],
-            "saude": [
-                {"publicacao": "Fundo Mun. de Saúde", "data": "Aguardando Bot", "assunto": "Aguardando mapeamento de portarias da Saúde...", "link": "#"}
-            ],
-            "procuradoria": [
-                {"publicacao": "Pareceres PGM", "data": "Aguardando Bot", "assunto": "Aguardando indexação de pareceres jurídicos...", "link": "#"}
-            ],
-            "camara_vereadores": [
-                {"publicacao": "Projetos de Lei", "data": "Aguardando Bot", "assunto": "Aguardando leitura de pautas da Câmara...", "link": "#"}
-            ],
-            "judiciario_comarca": [
-                {"publicacao": "Movimentações", "data": "Aguardando Bot", "assunto": "Aguardando extração de editais do TJBA...", "link": "#"}
-            ]
+            "gabinete_prefeito": [],
+            "administracao": [],
+            "saude": [],
+            "procuradoria": [],
+            "camara_vereadores": [],
+            "judiciario_comarca": []
         }
     }
 ]
