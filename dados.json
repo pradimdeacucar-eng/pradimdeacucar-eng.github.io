@@ -3,7 +3,7 @@
         "federal": {
             "judiciario": {"nome": "Supremo Tribunal Federal", "link": "https://portal.stf.jus.br"},
             "executivo": {"nome": "Presidência / Diário Oficial da União", "link": "https://www.in.gov.br"},
-            "legislativo": {"nome": "Congresso Nacional (Câmara/Senado)", "link": "https://www.gov.br"}
+            "legislativo": {"nome": "Congresso Nacional", "link": "https://www.gov.br"}
         },
         "estadual": {
             "judiciario": {"nome": "Tribunal de Justiça da Bahia (TJBA)", "link": "https://www.tjba.jus.br"},
@@ -17,8 +17,8 @@
         },
         "blockchain": {
             "rede": "Polygon PoS Mainnet",
-            "marketplace": "https://opensea.io",
-            "status_auditoria": "Contratos Inteligentes Ativos"
+            "status_auditoria": "Contratos Imutáveis Ativos",
+            "p2p_link": "https://pradimdeacucar-eng.github.io/p2p-marketplace"
         }
     }
 ]
