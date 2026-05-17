@@ -108,35 +108,34 @@
     <script>
         async function fetchSystemData() {
             try {
-                // Previne cache agressivo forçando atualização limpa do JSON
                 const res = await fetch(`dados.json?nocache=${Date.now()}`);
                 if (!res.ok) throw new Error();
                 const rawData = await res.json();
                 const dataset = Array.isArray(rawData) ? rawData[0] : rawData;
                 
                 if (dataset) {
-                    // Renderização de nós - Esfera Federal
+                    // Esfera Federal
                     document.getElementById('fed-jud').innerHTML = `<a href="${dataset.federal.judiciario.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-blue-400 transition-colors">${dataset.federal.judiciario.nome}</a>`;
                     document.getElementById('fed-exec').innerHTML = `<a href="${dataset.federal.executivo.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-blue-400 transition-colors">${dataset.federal.executivo.nome}</a>`;
                     document.getElementById('fed-leg').innerHTML = `<a href="${dataset.federal.legislativo.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-blue-400 transition-colors">${dataset.federal.legislativo.nome}</a>`;
 
-                    // Renderização de nós - Esfera Estadual
+                    // Esfera Estadual
                     document.getElementById('est-jud').innerHTML = `<a href="${dataset.estadual.judiciario.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-purple-400 transition-colors">${dataset.estadual.judiciario.nome}</a>`;
                     document.getElementById('est-exec').innerHTML = `<a href="${dataset.estadual.executivo.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-purple-400 transition-colors">${dataset.estadual.executivo.nome}</a>`;
                     document.getElementById('est-leg').innerHTML = `<a href="${dataset.estadual.legislativo.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-purple-400 transition-colors">${dataset.estadual.legislativo.nome}</a>`;
 
-                    // Renderização de nós - Esfera Municipal
+                    // Esfera Municipal
                     document.getElementById('mun-jud').innerHTML = `<a href="${dataset.municipal.judiciario.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-emerald-400 transition-colors">${dataset.municipal.judiciario.nome}</a>`;
                     document.getElementById('mun-exec').innerHTML = `<a href="${dataset.municipal.executivo.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-emerald-400 transition-colors">${dataset.municipal.executivo.nome}</a>`;
                     document.getElementById('mun-leg').innerHTML = `<a href="${dataset.municipal.legislativo.link}" target="_blank" class="text-xs font-mono text-slate-300 hover:text-emerald-400 transition-colors">${dataset.municipal.legislativo.nome}</a>`;
 
-                    // Mapeamento Web3/P2P Gateway
+                    // Gateway Blockchain
                     document.getElementById('chain-tag').innerText = `${dataset.blockchain.rede} | ${dataset.blockchain.status_auditoria}`;
                     document.getElementById('p2p-btn-1').href = dataset.blockchain.p2p_link;
                     document.getElementById('p2p-btn-2').href = dataset.blockchain.p2p_link;
                     document.getElementById('p2p-btn-3').href = dataset.blockchain.p2p_link;
 
-                    // Alteração de Estado de Sinalização para Concluído
+                    // Chaveamento de Estado Global para Sucesso
                     const led = document.getElementById('status-led');
                     led.className = "w-2.5 h-2.5 bg-emerald-500 rounded-full";
                     const txt = document.getElementById('status-text');
@@ -144,7 +143,6 @@
                     txt.innerText = "VERITAS_SINC_OK";
                 }
             } catch (err) {
-                // Fallback de Falha Estrutural no Objeto JSON
                 const led = document.getElementById('status-led');
                 led.className = "w-2.5 h-2.5 bg-red-500 rounded-full";
                 const txt = document.getElementById('status-text');
