@@ -1,0 +1,9 @@
+{
+  "PREFEITURA": {
+    "Educação": ["bahia costa sul", "colégio estadual", "desapropriação", "lei orgânica"],
+    "Urbanismo": ["lagoa azul", "cumuruxatiba", "lotes", "adensamento", "vias"]
+  },
+  "CAMARA_VEREADORES": {
+    "Fiscalização": ["tcm", "contas", "limites", "pddu"]
+  }
+}

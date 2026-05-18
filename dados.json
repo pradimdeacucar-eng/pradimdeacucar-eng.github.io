@@ -1,27 +1,15 @@
 {
-    "PREFEITURA": {
-        "SAUDE_E_EDUCACAO": {
-            "palavras_chave": ["dispensa", "inexigibilidade", "emergencial", "insumos", "medicamentos", "combustível"],
-            "base_legal": "Art. 75 da Lei Federal nº 14.133/2021 (Nova Lei de Licitações)",
-            "jurisprudencia": "Instruções Normativas do TCM/BA & Princípio da Eficiência (Art. 37, CF)",
-            "gargalo_comum": "Fracionamento ilegal de despesa ou ausência de ampla cotação de preços de mercado para contratação direta.",
-            "plano_de_acao": "Recomendar a instauração imediata de Registro de Preços unificado para o trimestre subsequente e a publicação compulsória dos orçamentos coletados no PNCP em até 10 dias."
-        },
-        "GABINETE_E_ADMINISTRACAO": {
-            "palavras_chave": ["nomeia", "cargo em comissão", "assessor", "gratificação", "portaria"],
-            "base_legal": "Art. 37, V da Constituição Federal",
-            "jurisprudencia": "Súmula Vinculante nº 43 do STF (Desvio de finalidade de provimento e nepotismo)",
-            "gargalo_comum": "Nomeação de pessoal para cargos comissionados cujas atribuições fáticas são operacionais/técnicas, e não de direção ou assessoramento estratégico.",
-            "plano_de_acao": "Exonerar preventivamente ou readequar o decreto executivo para funções consultivas, abrindo Processo Seletivo Simplificado (PSS) para suprir as demandas operacionais."
-        }
-    },
-    "CAMARA_VEREADORES": {
-        "LOGISTICA_E_GASTOS": {
-            "palavras_chave": ["diárias", "viagem", "reembolso", "indenizatória", "combustível", "prestação de contas"],
-            "base_legal": "Princípios da Economicidade e Moralidade (Art. 37, CF) & Lei de Responsabilidade Fiscal",
-            "jurisprudencia": "Resoluções e Precedentes de Sanções do TCM/BA sobre verbas de gabinete",
-            "gargalo_comum": "Concessão de verbas indenizatórias ou diárias sem a publicação imediata do relatório analítico de viagem ou comprovação do interesse público do município.",
-            "plano_de_acao": "Exigir a retenção cautelar do empenho até a inserção em ata e publicação oficial do certificado de participação ou relatório de atividades legislativas em até 5 dias úteis."
-        }
-    }
+  "PREFEITURA": {
+    "Educação": [
+      "Decreto Municipal nº 256/2021 - Dispõe sobre desapropriação de área de pleno domínio no Loteamento Bahia Costa Sul para sede de Colégio Estadual."
+    ],
+    "Urbanismo": [
+      "Decreto Municipal nº 126/2023 - Aprovação do Loteamento Lagoa Azul com 169 lotes em Cumuruxatiba."
+    ]
+  },
+  "CAMARA_VEREADORES": {
+    "Fiscalização": [
+      "Sessões Ordinárias de acompanhamento das contrapartidas fiscais e limites do PDDU de 2005."
+    ]
+  }
 }
