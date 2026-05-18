@@ -1,15 +1,21 @@
 {
-  "PREFEITURA": {
-    "Educação": [
-      "Decreto Municipal nº 256/2021 - Dispõe sobre desapropriação de área de pleno domínio no Loteamento Bahia Costa Sul para sede de Colégio Estadual."
-    ],
-    "Urbanismo": [
-      "Decreto Municipal nº 126/2023 - Aprovação do Loteamento Lagoa Azul com 169 lotes em Cumuruxatiba."
-    ]
-  },
-  "CAMARA_VEREADORES": {
-    "Fiscalização": [
-      "Sessões Ordinárias de acompanhamento das contrapartidas fiscais e limites do PDDU de 2005."
-    ]
+  "orgaos": {
+    "PREFEITURA": {
+      "secretarias": {
+        "Educação": [
+          "Decreto Municipal nº 256/2021 - Dispõe sobre desapropriação de área de pleno domínio no Loteamento Bahia Costa Sul para sede de Colégio Estadual."
+        ],
+        "Urbanismo": [
+          "Decreto Municipal nº 126/2023 - Aprovação do Loteamento Lagoa Azul com 169 lotes em Cumuruxatiba."
+        ]
+      }
+    },
+    "CAMARA_VEREADORES": {
+      "secretarias": {
+        "Fiscalização": [
+          "Sessões Ordinárias de acompanhamento das contrapartidas fiscais e limites do PDDU de 2005."
+        ]
+      }
+    }
   }
 }

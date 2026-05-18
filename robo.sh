@@ -1,21 +1,47 @@
 #!/bin/bash
 
-# URL real de Prado
-URL_PORTAL="https://doem.org.br/ba/prado"
+echo "=== CALIBRANDO JSON COM A ESTRUTURA DOS TRÊS PODERES ==="
 
-# Pescando o código do diário mais recente
-CODIGO=$(curl -s $URL_PORTAL | grep -oP '/diarios/previsualizar/\K[A-Za-z0-9]+' | head -n 1)
+# 1. Gerando dados.json com a árvore exata: orgaos -> escopo -> secretarias
+cat << 'JSON' > dados.json
+{
+  "orgaos": {
+    "PREFEITURA": {
+      "secretarias": {
+        "Educação": [
+          "Decreto Municipal nº 256/2021 - Dispõe sobre desapropriação de área de pleno domínio no Loteamento Bahia Costa Sul para sede de Colégio Estadual."
+        ],
+        "Urbanismo": [
+          "Decreto Municipal nº 126/2023 - Aprovação do Loteamento Lagoa Azul com 169 lotes em Cumuruxatiba."
+        ]
+      }
+    },
+    "CAMARA_VEREADORES": {
+      "secretarias": {
+        "Fiscalização": [
+          "Sessões Ordinárias de acompanhamento das contrapartidas fiscais e limites do PDDU de 2005."
+        ]
+      }
+    }
+  }
+}
+JSON
 
-# Se não achou nada, ele te avisa
-if [ -z "$CODIGO" ]; then
-    echo "Erro: O site da prefeitura mudou ou está fora do ar."
-    exit 1
-fi
+# 2. Gerando o gabarito_compliance.json alinhado para o cruzamento cognitivo
+cat << 'JSON' > gabarito_compliance.json
+{
+  "PREFEITURA": {
+    "secretarias": {
+      "Educação": ["bahia costa sul", "colégio estadual", "desapropriação", "lei orgânica"],
+      "Urbanismo": ["lagoa azul", "cumuruxatiba", "lotes", "adensamento", "vias"]
+    }
+  },
+  "CAMARA_VEREADORES": {
+    "secretarias": {
+      "Fiscalização": ["tcm", "contas", "limites", "pddu"]
+    }
+  }
+}
+JSON
 
-# Monta o link completo
-URL_FINAL="https://doem.org.br/ba/prado/diarios/previsualizar/$CODIGO"
-
-# CRIA O JSON DO ZERO - Sem erro de vírgula ou aspas sobrando
-printf '[\n  "%s"\n]\n' "$URL_FINAL" > dados.json
-
-echo "Pronto! O link real foi salvo com sucesso."
+echo "[SUCESSO] Estrutura interna alinhada!"
