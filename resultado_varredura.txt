@@ -1,52 +1,96 @@
-24:PREFEITURA MUNICIPAL DE PRADO
-73:Prefeitura Municipal de Prado
-168:Prefeitura Municipal de Prado
-93:EDUCAÇÃO
-244:que lhe confere a Lei Orgânica do Município e o inciso I do artigo 2º da Lei Federal nº 13.465/2017 e,
-315:constitucionais, na forma prevista na Lei Orgânica Municipal e artigo 32 da Lei Federal nº 13.465/2017
-427:O PREFEITO MUNICIPAL DE PRADO, Estado da Bahia, no uso das atribuições que lhe conferem a Constituição Federal, a Lei Orgânica Municipal e a legislação urbanística vigente,
-368:Art. 6º. Para a execução da Reurb-S e Reurb-E, ficam dispensadas as exigências relativas ao percentual e às dimensões de áreas destinadas ao uso público, ao tamanho dos lotes a serem regularizados
-398:público, tamanho dos lotes regularizados ou a outro parâmetro urbanístico e edilício.
-13:ATOS MUNICIPAIS - REURB . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-236:ATOS MUNICIPAIS - REURB
-249:Fundiária Urbana (Reurb) e estabelece mecanismos para a regularização de núcleos urbanos informais;
-251:define os procedimentos aplicáveis à Reurb;
-279:Art. 3º. O Município enquadra os núcleos urbanos declarados neste Decreto na modalidade de Regularização Fundiária Urbana, nos termos da Lei nº 13.465/2017, devendo a autoridade competente definir, no procedimento administrativo próprio, a classificação entre Reurb-S (interesse social) ou ReurbE (interesse específico).
-309:Autoriza a Regularização Fundiária Urbana, na modalidade mista - de Interesse Social (REURB-S) e de Interesse Específico (REURB-E), consistente em núcleos
-317:Considerando que a Regularização Fundiária Urbana (REURB), instituída pela Lei Federal nº
-323:(REURB), a qual abrange medidas jurídicas, urbanísticas, ambientais e sociais destinadas à incorporação dos núcleos urbanos informais ao ordenamento territorial urbano e à titulação de seus ocupantes";
-325:para a implementação de processos de regularização fundiária (REURB) em todo o território nacional,
-326:atribuindo competências ao Município, em especial, para requerer e instaurar a REURB, classificar as
-327:modalidades da REURB, processar, analisar e aprovar os projetos de regularização fundiária e emitir
-337:fundiária mista - de Interesse Social (REURB-S) e de Interesse Específico (REURB-E).
-340:(REURB-S) e de Interesse Específico (REURB-E), a ocorrer nos núcleos urbanos consolidados, nas
-356:competências do Município para processamento, análise e aprovação da REURB, conforme artigo 28
-359:classificado como REURB-S ou REURB-E após a realização de levantamento cadastral na área a fim
-360:de verificar a predominância de população de baixa renda na área objeto de REURB, nos termos dos
-362:Parágrafo único. Havendo predominância de uma modalidade de REURB em detrimento de outra, fica
-363:autorizada a regularização da parte restante do núcleo, considerando para todos os efeitos a sua classificação, se REURB-S ou REURB-E.
-365:bem como a identificação dos imóveis abrangidos pela REURB em questão, com seus proprietários,
-368:Art. 6º. Para a execução da Reurb-S e Reurb-E, ficam dispensadas as exigências relativas ao percentual e às dimensões de áreas destinadas ao uso público, ao tamanho dos lotes a serem regularizados
-371:Art. 8º. Como critério para participação da Reurb-S, a população beneficiária deverá ser predominantemente baixa renda, assim compreendidas aquelas com renda familiar não superior ao triplo do salário
-374:à Reurb-S:
-375:I - o primeiro registro da Reurb-S, o qual confere direitos reais aos seus beneficiários;
-382:VI - a aquisição do primeiro direito real sobre unidade imobiliária derivada da Reurb-S;
-394:a Regularização Fundiária Urbana de Interesse Específico (REURB-E), destina-se a ocupação por população não qualificada como de baixa renda, do qual não se aplica o disposto no artigo 9º deste
-423:da Regularização Fundiária Urbana – REURB na modalidade de Interesse Social (REURB-S), nos termos da Lei
-430:Considerando que a Lei Federal nº 13.465/2017 institui normas gerais de Regularização Fundiária Urbana – REURB;
-435:Considerando que a definição da modalidade da REURB constitui ato administrativo essencial
-439:Regularização Fundiária Urbana (REURB) na modalidade de Interesse Social (REURB-S), aplicáveis
-442:Art. 2º. O Município classifica como REURB-S a modalidade de regularização fundiária urbana destinada a núcleos urbanos informais ocupados predominantemente por população de baixa renda, ou de
-443:imóvel pertencente a população de baixa renda inseridos no âmbito do procedimento da Reurb, seja
-445:Art. 3º. O Município reconhece e declara a modalidade REURB-S mediante decisão administrativa
-464:c) Deverá o beneficiário da Reurb-S comprovar:
-486:Art. 4º. O Município realizará a classificação da modalidade da REURB-S no âmbito de processo administrativo específico, instruído com:
-504:Art. 5º. O Município, uma vez declarado que o imóvel se encontra classificado na modalidade REURBS:
-510:Art. 6º. O Município aplicará, no âmbito da REURB-S, os seguintes instrumentos jurídicos, conforme
-517:I – a condução dos processos de REURB;
-521:Art. 8º. Será classificado coletivamente na modalidade REURB-SE, os núcleos urbanos que não atendam ao requisito para classificação na modalidade REURB-S.
-280:Art. 4º. A Secretaria Municipal de Planejamento e Desenvolvimento Urbano - SEPLAN deverá:
-354:de Planejamento e Desenvolvimento Urbano - SEPLAN, com a colaboração dos demais órgãos municipais afetos ao tema.
-396:Art. 11. Para fins deste Decreto, a Secretaria de Planejamento e Desenvolvimento Urbano do Município
-428:Considerando que o art. 30, inciso VIII, da Constituição Federal atribui ao Município a competência para promover o adequado ordenamento territorial, mediante planejamento e controle do uso,
-516:Art. 7º. O Município atribui à Secretaria Municipal de Planejamento e Desenvolvimento Urbano competente pela política urbana:
+CONTRATO
+CONTRATO Nº 206/2026 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+TERMO DE CONTRATO
+DECRETO
+ATOS MUNICIPAIS - REURB . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+CONTRATO Nº 206/2026
+Contrato nº 206/2026
+Link PNCP: https://pncp.gov.br/app/contratos/13761713000110/2026/186
+Tipo de Contrato:
+Contrato
+Data de Início da Vigência do Contrato:
+Data de Término da Vigência do Contrato:
+Tipo de Termo de Contrato:
+Contrato:
+Contrato nº 589/2025
+O Objeto do presente Aditamento é a alteração no Contrato Original da CLÁUSULA DÉCIMA SEGUNDA – Da Vigência, referente ao
+Contrato nº 589/2025 do Pregão Eletrônico SRP nº 011/2025.
+Contrato:
+de Contrato:
+ATOS MUNICIPAIS - REURB
+DECRETO MUNICIPAL Nº 033/2026
+Declara Núcleos Urbanos Informais Consolidados para
+Fundiária Urbana (Reurb) e estabelece mecanismos para a regularização de núcleos urbanos informais;
+Considerando que o Decreto Federal nº 9.310/2018, que regulamenta a Lei nº 13.465/2017 e
+define os procedimentos aplicáveis à Reurb;
+Considerando que o núcleo urbano objeto deste ato apresenta ocupação humana consolidada, com características de irreversibilidade fática e integração à malha urbana municipal;
+e identificou os requisitos legais para a caracterização do núcleo urbano informal consolidado;
+Art. 1º. Fica declarado como núcleo urbano informal para fins de Regularização Fundiária Urbana as
+Art. 2º. O Município reconhece que os núcleos urbanos Consolidados referidos no art. 1º apresenta as
+I – ocupação predominantemente destinada à moradia, com uso urbano consolidado;
+Art. 3º. O Município enquadra os núcleos urbanos declarados neste Decreto na modalidade de Regularização Fundiária Urbana, nos termos da Lei nº 13.465/2017, devendo a autoridade competente definir, no procedimento administrativo próprio, a classificação entre Reurb-S (interesse social) ou ReurbE (interesse específico).
+Art. 4º. A Secretaria Municipal de Planejamento e Desenvolvimento Urbano - SEPLAN deverá:
+Art. 5º. Este Decreto constitui ato administrativo motivado que reconhece a situação de fato consolidada e autoriza o prosseguimento das medidas administrativas de regularização fundiária urbana.
+Art. 6º Este Decreto entra em vigor na data de sua publicação.
+DECRETO MUNICIPAL Nº 034/2026
+Autoriza a Regularização Fundiária Urbana, na modalidade mista - de Interesse Social (REURB-S) e de Interesse Específico (REURB-E), consistente em núcleos
+urbanos informais consolidados na forma que menciona,
+Considerando que a Regularização Fundiária Urbana (REURB), instituída pela Lei Federal nº
+13.465 de 11 de julho de 2017, regulamentada pelo Decreto nº 9.310 de 15 de março de 2018, consubstancia o direito à moradia, consagrado como direito social pela Constituição Federal Brasileira
+(REURB), a qual abrange medidas jurídicas, urbanísticas, ambientais e sociais destinadas à incorporação dos núcleos urbanos informais ao ordenamento territorial urbano e à titulação de seus ocupantes";
+para a implementação de processos de regularização fundiária (REURB) em todo o território nacional,
+atribuindo competências ao Município, em especial, para requerer e instaurar a REURB, classificar as
+modalidades da REURB, processar, analisar e aprovar os projetos de regularização fundiária e emitir
+urbanos informais objeto de intervenção neste Município;
+solo urbano no local identificado como "Vila do Quati", caracterizado na modalidade de regularização
+fundiária mista - de Interesse Social (REURB-S) e de Interesse Específico (REURB-E).
+(REURB-S) e de Interesse Específico (REURB-E), a ocorrer nos núcleos urbanos consolidados, nas
+de Planejamento e Desenvolvimento Urbano - SEPLAN, com a colaboração dos demais órgãos municipais afetos ao tema.
+competências do Município para processamento, análise e aprovação da REURB, conforme artigo 28
+classificado como REURB-S ou REURB-E após a realização de levantamento cadastral na área a fim
+de verificar a predominância de população de baixa renda na área objeto de REURB, nos termos dos
+Parágrafo único. Havendo predominância de uma modalidade de REURB em detrimento de outra, fica
+autorizada a regularização da parte restante do núcleo, considerando para todos os efeitos a sua classificação, se REURB-S ou REURB-E.
+Art. 5º. A descrição e delimitação precisa de cada área caracterizada como núcleo urbano informal,
+bem como a identificação dos imóveis abrangidos pela REURB em questão, com seus proprietários,
+Art. 6º. Para a execução da Reurb-S e Reurb-E, ficam dispensadas as exigências relativas ao percentual e às dimensões de áreas destinadas ao uso público, ao tamanho dos lotes a serem regularizados
+Art. 7º. Para execução da regularização de que trata este Decreto, serão utilizados os institutos jurídicos da legitimação fundiária e da legitimação de posse.
+Art. 8º. Como critério para participação da Reurb-S, a população beneficiária deverá ser predominantemente baixa renda, assim compreendidas aquelas com renda familiar não superior ao triplo do salário
+mínimo vigente no País, na forma do Decreto Municipal Regulamentador.
+à Reurb-S:
+I - o primeiro registro da Reurb-S, o qual confere direitos reais aos seus beneficiários;
+VI - a aquisição do primeiro direito real sobre unidade imobiliária derivada da Reurb-S;
+a Regularização Fundiária Urbana de Interesse Específico (REURB-E), destina-se a ocupação por população não qualificada como de baixa renda, do qual não se aplica o disposto no artigo 9º deste
+Decreto.
+Art. 11. Para fins deste Decreto, a Secretaria de Planejamento e Desenvolvimento Urbano do Município
+Art. 12. O processo de regularização fundiária de que trata este Decreto, será finalizado com a expedição da Certidão de Regularização Fundiária assinada pelo chefe do Poder Executivo e por profissional tecnicamente habilitado do Setor de Engenharia.
+Art. 13. Este Decreto entra em vigor na data de sua publicação.
+DECRETO MUNICIPAL Nº 035/2026
+da Regularização Fundiária Urbana – REURB na modalidade de Interesse Social (REURB-S), nos termos da Lei
+Federal nº 13.465/2017 e do Decreto Federal nº
+parcelamento e ocupação do solo urbano;
+Considerando que a Lei Federal nº 13.465/2017 institui normas gerais de Regularização Fundiária Urbana – REURB;
+Considerando que o Decreto Federal nº 9.310/2018 regulamenta a referida lei e estabelece
+Considerando que a definição da modalidade da REURB constitui ato administrativo essencial
+Regularização Fundiária Urbana (REURB) na modalidade de Interesse Social (REURB-S), aplicáveis
+a todos os núcleos urbanos informais situados em seu território.
+Parágrafo único. O Município aplica este Decreto a todos os processos administrativos de regularização fundiária instaurados ou em tramitação.
+Art. 2º. O Município classifica como REURB-S a modalidade de regularização fundiária urbana destinada a núcleos urbanos informais ocupados predominantemente por população de baixa renda, ou de
+imóvel pertencente a população de baixa renda inseridos no âmbito do procedimento da Reurb, seja
+Art. 3º. O Município reconhece e declara a modalidade REURB-S mediante decisão administrativa
+a) comprovação de que o ocupante do imóvel urbano pertence está classificado como família de
+c) Deverá o beneficiário da Reurb-S comprovar:
+c1 – que área total do terreno não seja superior 250 m² (duzentos e cinquenta metros quadrados);
+c4 – não possuir o beneficiário outro imóvel, urbano ou rural.
+II – Critério da consolidação da ocupação: Comprovação de que o núcleo urbano:
+b) apresenta uso urbano contínuo e irreversível;
+IV – Critério urbanístico e de ordenamento territorial: O Município verificará se o imóvel urbano:
+Art. 4º. O Município realizará a classificação da modalidade da REURB-S no âmbito de processo administrativo específico, instruído com:
+Art. 5º. O Município, uma vez declarado que o imóvel se encontra classificado na modalidade REURBS:
+V – promove a inclusão social e a integração do núcleo ao ordenamento urbano formal.
+Art. 6º. O Município aplicará, no âmbito da REURB-S, os seguintes instrumentos jurídicos, conforme
+Art. 7º. O Município atribui à Secretaria Municipal de Planejamento e Desenvolvimento Urbano competente pela política urbana:
+I – a condução dos processos de REURB;
+Art. 8º. Será classificado coletivamente na modalidade REURB-SE, os núcleos urbanos que não atendam ao requisito para classificação na modalidade REURB-S.
+Decreto Federal nº 9.310/2018 aos casos omissos.
+Art. 11. Este Decreto entra em vigor na data de sua publicação.
