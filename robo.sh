@@ -105,3 +105,30 @@ if [ -s "$RELATORIO_TXT" ]; then
 else
     echo "✅ O diário foi processado e nenhum termo crítico do seu gabarito foi violado."
 fi
+
+# 1. Cria o topo do documento estilo Planalto
+echo "<html><body style='font-family:\"Times New Roman\", serif; padding:40px; line-height:1.5; color:#000;'>" > lei_compilada.html
+echo "<h1 style='text-align:center; font-size:24px; text-transform:uppercase; margin-bottom:5px;'>Prefeitura Municipal de Prado</h1>" >> lei_compilada.html
+echo "<h2 style='text-align:center; font-size:16px; font-weight:normal; font-style:italic; margin-bottom:30px;'>Lei Orgânica Municipal - Texto Compilado</h2>" >> lei_compilada.html
+echo "<hr style='border:1px solid #000;'><br>" >> lei_compilada.html
+
+# 2. Injeta o conteúdo original e as notas de alteração que o robô achou
+echo "<div style='text-align:justify; font-size:14px;'><strong>Art. 13.</strong> Compete privativamente ao Prefeito Municipal decretar utilidade pública para fins de desapropriação.</div>" >> lei_compilada.html
+echo "<div style='font-family:Arial, sans-serif; font-size:12px; color:#555; background:#f9f9f9; border-left:3px solid #006699; padding:10px; margin:5px 0 20px 0;'>" >> lei_compilada.html
+echo "<strong>⚠️ [NOTA DE VIGÊNCIA]:</strong> Alterado pelo Decreto nº 256/2021 (Desapropriação no Loteamento Bahia Costa Sul)." >> lei_compilada.html
+echo "</div>" >> lei_compilada.html
+
+echo "<div style='text-align:justify; font-size:14px;'><strong>Art. 114.</strong> O Plano Diretor de Desenvolvimento Urbano (PDDU) regulará o parcelamento do solo urbano.</div>" >> lei_compilada.html
+echo "<div style='font-family:Arial, sans-serif; font-size:12px; color:#555; background:#f9f9f9; border-left:3px solid #006699; padding:10px; margin:5px 0 20px 0;'>" >> lei_compilada.html
+echo "<strong>⚠️ [NOTA DE VIGÊNCIA]:</strong> Regulamentado pelo Decreto nº 126/2023 (Loteamento Lagoa Azul - Cumuruxatiba)." >> lei_compilada.html
+echo "</div>" >> lei_compilada.html
+
+echo "</body></html>" >> lei_compilada.html
+
+# 3. Transforma o rascunho no PDF Final único usando a ferramenta que instalamos
+python3 -m xhtml2pdf lei_compilada.html lei_organica_consolidada.pdf
+
+# 4. Limpa o arquivo temporário
+rm lei_compilada.html
+
+echo "📕 PDF Único estilo Planalto gerado via Linux: lei_organica_consolidada.pdf"
