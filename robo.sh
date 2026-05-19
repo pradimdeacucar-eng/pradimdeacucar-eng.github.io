@@ -45,3 +45,49 @@ cat << 'JSON' > gabarito_compliance.json
 JSON
 
 echo "[SUCESSO] Estrutura interna alinhada!"
+echo "========================================="
+echo "4. GERANDO RELATÓRIO FORMATADO PARA O GITHUB..."
+echo "========================================="
+
+# Nome do relatório final baseado na data de hoje
+DATA_HOJE=$(date +%Y-%m-%d)
+RELATORIO_FINAL="relatorio_auditoria_${DATA_HOJE}.md"
+
+# Se o resultado da varredura não estiver vazio, cria o relatório de danos
+if [ -s resultado_varredura.txt ]; then
+    
+    # Monta um documento Markdown bonitão de forma automática
+    echo "# ⚠️ RELATÓRIO DE AUDITORIA DE CONFORMIDADE" > $RELATORIO_FINAL
+    echo "Distrito/Município: Auditoria Automatizada" >> $RELATORIO_FINAL
+    echo "Data da Varredura: $(date '+%d/%m/%Y às %H:%M:%S')" >> $RELATORIO_FINAL
+    echo "Status: **INCONFORMIDADE DETECTADA**" >> $RELATORIO_FINAL
+    echo "---" >> $RELATORIO_FINAL
+    echo "## 🔍 Termos Encontrados no Diário Oficial:" >> $RELATORIO_FINAL
+    echo "Abaixo estão as ocorrências de termos ligados a Planejamento Urbano e Terrenos Vazios:" >> $RELATORIO_FINAL
+    echo "" >> $RELATORIO_FINAL
+    
+    # Injeta os trechos encontrados formatados como citações de código
+    echo "\`\`\`text" >> $RELATORIO_FINAL
+    cat resultado_varredura.txt >> $RELATORIO_FINAL
+    echo "\`\`\`" >> $RELATORIO_FINAL
+    
+    echo "---" >> $RELATORIO_FINAL
+    echo "### 🛡️ Autenticidade" >> $RELATORIO_FINAL
+    # Gera a pegada criptográfica única do relatório (Hash) que vai virar o NFT
+    HASH_RELATORIO=$(sha256sum $RELATORIO_FINAL | awk '{print $1}')
+    echo "Pegada Digital (SHA-256): \`$HASH_RELATORIO\`" >> $RELATORIO_FINAL
+
+    echo "✅ Relatório visual gerado: $RELATORIO_FINAL"
+    
+    # Próximo passo automático: Enviar para o GitHub usando os comandos que você já tem vinculados
+    # git add $RELATORIO_FINAL
+    # git commit -m "Adicionando relatório de conformidade urbano $DATA_HOJE"
+    # git push origin main
+
+else
+    echo "✅ Tudo limpo. Nenhum dano ou termo encontrado para gerar relatório."
+fi
+
+# Comando atualizado usando weasyprint (funciona perfeitamente no seu WSL)
+weasyprint "$RELATORIO_FINAL" "relatorio_auditoria_${DATA_HOJE}.pdf"
+echo "📕 PDF Oficial Gerado: relatorio_auditoria_${DATA_HOJE}.pdf"

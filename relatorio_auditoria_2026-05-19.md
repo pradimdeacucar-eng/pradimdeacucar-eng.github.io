@@ -1,6 +1,6 @@
 # ⚠️ RELATÓRIO DE AUDITORIA DE CONFORMIDADE
 Distrito/Município: Auditoria Automatizada
-Data da Varredura: 19/05/2026 às 03:12:02
+Data da Varredura: 19/05/2026 às 03:15:11
 Status: **INCONFORMIDADE DETECTADA**
 ---
 ## 🔍 Termos Encontrados no Diário Oficial:
@@ -37,4 +37,4 @@ Nexo com PDDU 2005: Substitui as tabelas de zoneamento de 2005. Altera perímetr
 ```
 ---
 ### 🛡️ Autenticidade
-Pegada Digital (SHA-256): `289435a4ce8efbf41af0fb4631270fed7498fdfb0494e70b6c302645d5167491`
+Pegada Digital (SHA-256): `528de050fe24e066b0cd46279113623cce0960c817bc6594f3c7dcbdc8238984`
