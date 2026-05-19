@@ -132,3 +132,7 @@ python3 -m xhtml2pdf lei_compilada.html lei_organica_consolidada.pdf
 rm lei_compilada.html
 
 echo "📕 PDF Único estilo Planalto gerado via Linux: lei_organica_consolidada.pdf"
+
+# Limpeza dos arquivos temporários para não lotar o VS Code
+rm -f diarios_texto/pagina-*.png
+rm -f diarios_texto/pagina-*.txt
