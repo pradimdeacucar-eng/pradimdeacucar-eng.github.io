@@ -2,7 +2,7 @@
   "PREFEITURA": {
     "secretarias": {
       "Educação": ["bahia costa sul", "colégio estadual", "desapropriação", "lei orgânica"],
-      "Urbanismo": ["lagoa azul", "cumuruxatiba", "lotes", "adensamento", "vias"]
+      "Urbanismo": ["lagoa azul", "cumuruxatiba", "lotes", "adensamento", "vias", "reurb", "terreno vazio", "planejamento"]
     }
   },
   "CAMARA_VEREADORES": {

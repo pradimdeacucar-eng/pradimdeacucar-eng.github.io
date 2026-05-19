@@ -1,27 +1,52 @@
-=== RELATÓRIO DE ALTERAÇÕES E NEXO CAUSAL (PRADO/BA) ===
-Use os blocos abaixo para dar Ctrl+C e Ctrl+V no seu Miro.
-
---- BLOCO PARA O MIRO: Decreto Municipal nº 256/2021 ---
-ALTERAÇÃO: Decreto Municipal nº 256/2021 (2021)
-Tipo de Ato: Desapropriação
-Resumo Prático: Desapropriação de área no Loteamento Bahia Costa Sul para construção do Colégio Estadual de Prado.
-Nexo com Lei Orgânica: Art. 13, Inciso XL da Lei Orgânica (Competência do Prefeito para desapropriar por utilidade pública).
-Nexo com PDDU 2005: Classificado como Equipamento Comunitário de Educação. Exige análise de impacto de tráfego local.
-----------------------------------------
-
---- BLOCO PARA O MIRO: Decreto Municipal nº 126/2023 ---
-ALTERAÇÃO: Decreto Municipal nº 126/2023 (2023)
-Tipo de Ato: Loteamento / Parcelamento
-Resumo Prático: Aprovação do Loteamento Lagoa Azul (169 lotes residenciais/comerciais) no Bairro Areia Preta, Cumuruxatiba.
-Nexo com Lei Orgânica: Art. 13, Incisos XVIII e XIX da Lei Orgânica (Promover o ordenamento territorial e controle do solo urbano).
-Nexo com PDDU 2005: Gera lotes com média de 312m². Alerta: O PDDU original de 2005 previa restrições de adensamento e lotes maiores em zonas costeiras/turísticas para proteção do lençol freático.
-----------------------------------------
-
---- BLOCO PARA O MIRO: Lei Complementar nº 012/2021 (PDDU 2021) ---
-ALTERAÇÃO: Lei Complementar nº 012/2021 (PDDU 2021) (2021)
-Tipo de Ato: Revisão Geral do PDDU
-Resumo Prático: Institui o novo Plano Diretor de Desenvolvimento Urbano, atualizando integralmente a lei original de 2005.
-Nexo com Lei Orgânica: Art. 75 da Lei Orgânica (Exige aprovação por maioria absoluta na Câmara de Vereadores e participação popular).
-Nexo com PDDU 2005: Substitui as tabelas de zoneamento de 2005. Altera perímetros urbanos da Sede, Cumuruxatiba e Corumbau.
-----------------------------------------
-
+24:PREFEITURA MUNICIPAL DE PRADO
+73:Prefeitura Municipal de Prado
+168:Prefeitura Municipal de Prado
+93:EDUCAÇÃO
+244:que lhe confere a Lei Orgânica do Município e o inciso I do artigo 2º da Lei Federal nº 13.465/2017 e,
+315:constitucionais, na forma prevista na Lei Orgânica Municipal e artigo 32 da Lei Federal nº 13.465/2017
+427:O PREFEITO MUNICIPAL DE PRADO, Estado da Bahia, no uso das atribuições que lhe conferem a Constituição Federal, a Lei Orgânica Municipal e a legislação urbanística vigente,
+368:Art. 6º. Para a execução da Reurb-S e Reurb-E, ficam dispensadas as exigências relativas ao percentual e às dimensões de áreas destinadas ao uso público, ao tamanho dos lotes a serem regularizados
+398:público, tamanho dos lotes regularizados ou a outro parâmetro urbanístico e edilício.
+13:ATOS MUNICIPAIS - REURB . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+236:ATOS MUNICIPAIS - REURB
+249:Fundiária Urbana (Reurb) e estabelece mecanismos para a regularização de núcleos urbanos informais;
+251:define os procedimentos aplicáveis à Reurb;
+279:Art. 3º. O Município enquadra os núcleos urbanos declarados neste Decreto na modalidade de Regularização Fundiária Urbana, nos termos da Lei nº 13.465/2017, devendo a autoridade competente definir, no procedimento administrativo próprio, a classificação entre Reurb-S (interesse social) ou ReurbE (interesse específico).
+309:Autoriza a Regularização Fundiária Urbana, na modalidade mista - de Interesse Social (REURB-S) e de Interesse Específico (REURB-E), consistente em núcleos
+317:Considerando que a Regularização Fundiária Urbana (REURB), instituída pela Lei Federal nº
+323:(REURB), a qual abrange medidas jurídicas, urbanísticas, ambientais e sociais destinadas à incorporação dos núcleos urbanos informais ao ordenamento territorial urbano e à titulação de seus ocupantes";
+325:para a implementação de processos de regularização fundiária (REURB) em todo o território nacional,
+326:atribuindo competências ao Município, em especial, para requerer e instaurar a REURB, classificar as
+327:modalidades da REURB, processar, analisar e aprovar os projetos de regularização fundiária e emitir
+337:fundiária mista - de Interesse Social (REURB-S) e de Interesse Específico (REURB-E).
+340:(REURB-S) e de Interesse Específico (REURB-E), a ocorrer nos núcleos urbanos consolidados, nas
+356:competências do Município para processamento, análise e aprovação da REURB, conforme artigo 28
+359:classificado como REURB-S ou REURB-E após a realização de levantamento cadastral na área a fim
+360:de verificar a predominância de população de baixa renda na área objeto de REURB, nos termos dos
+362:Parágrafo único. Havendo predominância de uma modalidade de REURB em detrimento de outra, fica
+363:autorizada a regularização da parte restante do núcleo, considerando para todos os efeitos a sua classificação, se REURB-S ou REURB-E.
+365:bem como a identificação dos imóveis abrangidos pela REURB em questão, com seus proprietários,
+368:Art. 6º. Para a execução da Reurb-S e Reurb-E, ficam dispensadas as exigências relativas ao percentual e às dimensões de áreas destinadas ao uso público, ao tamanho dos lotes a serem regularizados
+371:Art. 8º. Como critério para participação da Reurb-S, a população beneficiária deverá ser predominantemente baixa renda, assim compreendidas aquelas com renda familiar não superior ao triplo do salário
+374:à Reurb-S:
+375:I - o primeiro registro da Reurb-S, o qual confere direitos reais aos seus beneficiários;
+382:VI - a aquisição do primeiro direito real sobre unidade imobiliária derivada da Reurb-S;
+394:a Regularização Fundiária Urbana de Interesse Específico (REURB-E), destina-se a ocupação por população não qualificada como de baixa renda, do qual não se aplica o disposto no artigo 9º deste
+423:da Regularização Fundiária Urbana – REURB na modalidade de Interesse Social (REURB-S), nos termos da Lei
+430:Considerando que a Lei Federal nº 13.465/2017 institui normas gerais de Regularização Fundiária Urbana – REURB;
+435:Considerando que a definição da modalidade da REURB constitui ato administrativo essencial
+439:Regularização Fundiária Urbana (REURB) na modalidade de Interesse Social (REURB-S), aplicáveis
+442:Art. 2º. O Município classifica como REURB-S a modalidade de regularização fundiária urbana destinada a núcleos urbanos informais ocupados predominantemente por população de baixa renda, ou de
+443:imóvel pertencente a população de baixa renda inseridos no âmbito do procedimento da Reurb, seja
+445:Art. 3º. O Município reconhece e declara a modalidade REURB-S mediante decisão administrativa
+464:c) Deverá o beneficiário da Reurb-S comprovar:
+486:Art. 4º. O Município realizará a classificação da modalidade da REURB-S no âmbito de processo administrativo específico, instruído com:
+504:Art. 5º. O Município, uma vez declarado que o imóvel se encontra classificado na modalidade REURBS:
+510:Art. 6º. O Município aplicará, no âmbito da REURB-S, os seguintes instrumentos jurídicos, conforme
+517:I – a condução dos processos de REURB;
+521:Art. 8º. Será classificado coletivamente na modalidade REURB-SE, os núcleos urbanos que não atendam ao requisito para classificação na modalidade REURB-S.
+280:Art. 4º. A Secretaria Municipal de Planejamento e Desenvolvimento Urbano - SEPLAN deverá:
+354:de Planejamento e Desenvolvimento Urbano - SEPLAN, com a colaboração dos demais órgãos municipais afetos ao tema.
+396:Art. 11. Para fins deste Decreto, a Secretaria de Planejamento e Desenvolvimento Urbano do Município
+428:Considerando que o art. 30, inciso VIII, da Constituição Federal atribui ao Município a competência para promover o adequado ordenamento territorial, mediante planejamento e controle do uso,
+516:Art. 7º. O Município atribui à Secretaria Municipal de Planejamento e Desenvolvimento Urbano competente pela política urbana:

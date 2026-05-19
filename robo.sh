@@ -1,39 +1,20 @@
 #!/bin/bash
 
-echo "=== CALIBRANDO JSON COM A ESTRUTURA DOS TRÊS PODERES ==="
+echo "========================================="
+echo "1. CONFIGURANDO AMBIENTE E GABARITOS"
+echo "========================================="
 
-# 1. Gerando dados.json com a árvore exata: orgaos -> escopo -> secretarias
-cat << 'JSON' > dados.json
-{
-  "orgaos": {
-    "PREFEITURA": {
-      "secretarias": {
-        "Educação": [
-          "Decreto Municipal nº 256/2021 - Dispõe sobre desapropriação de área de pleno domínio no Loteamento Bahia Costa Sul para sede de Colégio Estadual."
-        ],
-        "Urbanismo": [
-          "Decreto Municipal nº 126/2023 - Aprovação do Loteamento Lagoa Azul com 169 lotes em Cumuruxatiba."
-        ]
-      }
-    },
-    "CAMARA_VEREADORES": {
-      "secretarias": {
-        "Fiscalização": [
-          "Sessões Ordinárias de acompanhamento das contrapartidas fiscais e limites do PDDU de 2005."
-        ]
-      }
-    }
-  }
-}
-JSON
+# Cria as pastas necessárias para organização
+mkdir -p diarios_baixados
+mkdir -p diarios_texto
 
-# 2. Gerando o gabarito_compliance.json alinhado para o cruzamento cognitivo
+# Cria o gabarito estruturado (Mantendo a inteligência que você configurou)
 cat << 'JSON' > gabarito_compliance.json
 {
   "PREFEITURA": {
     "secretarias": {
       "Educação": ["bahia costa sul", "colégio estadual", "desapropriação", "lei orgânica"],
-      "Urbanismo": ["lagoa azul", "cumuruxatiba", "lotes", "adensamento", "vias"]
+      "Urbanismo": ["lagoa azul", "cumuruxatiba", "lotes", "adensamento", "vias", "reurb", "terreno vazio", "planejamento"]
     }
   },
   "CAMARA_VEREADORES": {
@@ -43,51 +24,84 @@ cat << 'JSON' > gabarito_compliance.json
   }
 }
 JSON
+echo "[SUCESSO] Gabarito de compliance estruturado!"
 
-echo "[SUCESSO] Estrutura interna alinhada!"
 echo "========================================="
-echo "4. GERANDO RELATÓRIO FORMATADO PARA O GITHUB..."
+echo "2. RECONHECENDO DIÁRIO OFICIAL DE PRADO"
 echo "========================================="
 
-# Nome do relatório final baseado na data de hoje
-DATA_HOJE=$(date +%Y-%m-%d)
-RELATORIO_FINAL="relatorio_auditoria_${DATA_HOJE}.md"
+# Caminho do arquivo que você já tem no seu computador
+ARQUIVO_ORIGEM="/mnt/c/Users/maico/Desktop/DECRETOS_DOEM_PRADO_PRIORIDADE/28a883a5ce57be13a6a6eb2179ace265.pdf"
+ARQUIVO_DESTINO="diarios_baixados/diario_atual.pdf"
 
-# Se o resultado da varredura não estiver vazio, cria o relatório de danos
-if [ -s resultado_varredura.txt ]; then
-    
-    # Monta um documento Markdown bonitão de forma automática
-    echo "# ⚠️ RELATÓRIO DE AUDITORIA DE CONFORMIDADE" > $RELATORIO_FINAL
-    echo "Distrito/Município: Auditoria Automatizada" >> $RELATORIO_FINAL
-    echo "Data da Varredura: $(date '+%d/%m/%Y às %H:%M:%S')" >> $RELATORIO_FINAL
-    echo "Status: **INCONFORMIDADE DETECTADA**" >> $RELATORIO_FINAL
-    echo "---" >> $RELATORIO_FINAL
-    echo "## 🔍 Termos Encontrados no Diário Oficial:" >> $RELATORIO_FINAL
-    echo "Abaixo estão as ocorrências de termos ligados a Planejamento Urbano e Terrenos Vazios:" >> $RELATORIO_FINAL
-    echo "" >> $RELATORIO_FINAL
-    
-    # Injeta os trechos encontrados formatados como citações de código
-    echo "\`\`\`text" >> $RELATORIO_FINAL
-    cat resultado_varredura.txt >> $RELATORIO_FINAL
-    echo "\`\`\`" >> $RELATORIO_FINAL
-    
-    echo "---" >> $RELATORIO_FINAL
-    echo "### 🛡️ Autenticidade" >> $RELATORIO_FINAL
-    # Gera a pegada criptográfica única do relatório (Hash) que vai virar o NFT
-    HASH_RELATORIO=$(sha256sum $RELATORIO_FINAL | awk '{print $1}')
-    echo "Pegada Digital (SHA-256): \`$HASH_RELATORIO\`" >> $RELATORIO_FINAL
-
-    echo "✅ Relatório visual gerado: $RELATORIO_FINAL"
-    
-    # Próximo passo automático: Enviar para o GitHub usando os comandos que você já tem vinculados
-    # git add $RELATORIO_FINAL
-    # git commit -m "Adicionando relatório de conformidade urbano $DATA_HOJE"
-    # git push origin main
-
+if [ -f "$ARQUIVO_ORIGEM" ]; then
+    cp "$ARQUIVO_ORIGEM" "$ARQUIVO_DESTINO"
+    echo "✅ Diário de Prado localizado e copiado com sucesso!"
 else
-    echo "✅ Tudo limpo. Nenhum dano ou termo encontrado para gerar relatório."
+    echo "⚠️ Alerta: O arquivo PDF não foi achado na Área de Trabalho."
+    echo "Certifique-se de que o PDF está na pasta do projeto como diarios_baixados/diario_atual.pdf"
 fi
 
-# Comando atualizado usando weasyprint (funciona perfeitamente no seu WSL)
-weasyprint "$RELATORIO_FINAL" "relatorio_auditoria_${DATA_HOJE}.pdf"
-echo "📕 PDF Oficial Gerado: relatorio_auditoria_${DATA_HOJE}.pdf"
+echo "========================================="
+echo "3. CONVERTENDO PDF PARA TEXTO"
+echo "========================================="
+if [ -f "$ARQUIVO_DESTINO" ]; then
+    pdftotext "$ARQUIVO_DESTINO" diarios_texto/diario_atual.txt
+    echo "✅ PDF convertido para texto com sucesso!"
+else
+    echo "❌ Erro: Não há PDF para converter."
+    exit 1
+fi
+
+echo "========================================="
+echo "4. EXECUTANDO AUDITORIA DE CONFORMIDADE"
+echo "========================================="
+# Limpa resultados anteriores
+> resultado_varredura.txt
+
+# Extrai as palavras chaves do seu JSON para o motor do grep varrer o texto
+grep -o '"[^"]*"' gabarito_compliance.json | tr -d '"' | while read -r termo; do
+    if [ ${#termo} -gt 3 ]; then # Ignora chaves curtas do JSON como 'tcm'
+        # Varre o texto e captura a linha inteira onde o termo aparece
+        grep -i -n "$termo" diarios_texto/diario_atual.txt >> resultado_varredura.txt
+    fi
+done
+
+echo "========================================="
+echo "5. GERANDO RELATÓRIO PDF AUTOMÁTICO"
+echo "========================================="
+
+DATA_HOJE=$(date +%Y-%m-%d)
+RELATORIO_TXT="resultado_varredura.txt"
+RELATORIO_PDF="relatorio_auditoria_${DATA_HOJE}.pdf"
+
+if [ -s "$RELATORIO_TXT" ]; then
+    # Monta a estrutura do documento visual em HTML
+    echo "<html><body style='font-family:Arial, sans-serif; padding:30px; color:#333; line-height:1.5;'>" > template.html
+    echo "<div style='border-left:6px solid #d9534f; padding-left:15px; margin-bottom:20px;'>" >> template.html
+    echo "<h1 style='margin:0; color:#1a1a1a;'>⚠️ ALERTA DE AUDITORIA DE CONFORMIDADE</h1>" >> template.html
+    echo "<span style='background:#fff5f5; color:#c53030; padding:3px 8px; border-radius:4px; font-weight:bold; font-size:12px; border:1px solid #feb2b2;'>INCONFORMIDADE DETECTADA</span>" >> template.html
+    echo "</div>" >> template.html
+    
+    echo "<p><strong>Município Auditado:</strong> Prado - BA</p>" >> template.html
+    echo "<p><strong>Data da Varredura:</strong> $(date '+%d/%m/%Y às %H:%M:%S')</p>" >> template.html
+    echo "<p><strong>Alvo da Análise:</strong> Desenvolvimento Urbano, Planejamento e REURB</p><hr style='border:0; border-top:1px solid #eee;'>" >> template.html
+    
+    echo "<h3>🔍 Linhas e Evidências Capturadas no Diário Oficial:</h3>" >> template.html
+    echo "<pre style='background:#f7fafc; padding:15px; border:1px solid #e2e8f0; border-radius:6px; font-family:monospace; font-size:11px; white-space:pre-wrap; word-break:break-all;'>" >> template.html
+    cat "$RELATORIO_TXT" >> template.html
+    echo "</pre><hr style='border:0; border-top:1px solid #eee;'>" >> template.html
+    
+    HASH_RELOGIO=$(sha256sum "$RELATORIO_TXT" | awk '{print $1}')
+    echo "<p style='font-size:12px; color:#666;'><strong>🛡️ Integridade Blockchain (Soulbound NFT Meta):</strong></p>" >> template.html
+    echo "<code style='background:#ebf8ff; color:#2b6cb0; padding:4px 8px; border-radius:4px; font-size:11px; border:1px solid #bee3f8; display:block;'>SHA-256 Hash: $HASH_RELOGIO</code>" >> template.html
+    echo "</body></html>" >> template.html
+
+    # Converte o HTML em um PDF comercial usando o motor python (xhtml2pdf)
+    python3 -m xhtml2pdf template.html "$RELATORIO_PDF"
+    
+    echo "📕 PDF OFICIAL GERADO COM SUCESSO: $RELATORIO_PDF"
+    rm template.html
+else
+    echo "✅ O diário foi processado e nenhum termo crítico do seu gabarito foi violado."
+fi
